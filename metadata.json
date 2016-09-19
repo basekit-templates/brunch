@@ -182,6 +182,7 @@
             "color__navigation--background": "@color-swatch3"
         },
         "form": {
+            "color__form--background" : "#fff",
             "color__form-legend--text" : "#fff",
             "color__form-legend--background": "@color__secondary"
         },
