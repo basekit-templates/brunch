@@ -14,25 +14,23 @@
 
 
     .legend {
-        position: absolute;
-        top: 0;
-        right: 50%;
-        left: 28%;
+        position: relative;
+        top: 30px;
+        right: 0;
         color: @color__form-legend--text;
         background-color: @color__form-legend--background;
-        width: 70px;
         height: 60px;
         font-family: @font__h2--font-family;
         font-size: @font__h2--font-size;
         line-height: @font__h2--line-height;
         text-align: right;
         text-align: center;
-        margin-top: -30px;
         line-height: 60px;
         -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
         -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
         box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
         text-indent: -9999px;
+        width: 70px;
         &:before {
             content:"\f044";
             width: 100%;
@@ -70,31 +68,17 @@
     .form-body {
         width: 50%;
         margin: 0 auto;
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-direction: normal;
-        -moz-box-direction: normal;
-        -webkit-box-orient: horizontal;
-        -moz-box-orient: horizontal;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        -webkit-box-pack: start;
-        -moz-box-pack: start;
-        -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-align-content: stretch;
-        -ms-flex-line-pack: stretch;
-        align-content: stretch;
         padding: 60px 40px 40px 40px;
         background-color: @color__form--background;
+        -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+        -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+        box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+
+        .flex-display(@display: flex);
+        .flex-direction(@direction: row);
+        .flex-wrap(@wrap: nowrap);
+        .justify-content(@justify: flex-start);
+        .align-content(@align: stretch);
 
         @media @bp-global-small {
             width: 100%;

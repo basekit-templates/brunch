@@ -192,10 +192,10 @@
             "color__button--background--hover": "@color__secondary",
             "color__button--text--hover" : "@color__button--text",
             "font__button--font-family" : "@font-swatch7-font-family",
-            "font__button--font-size" : "13px",
-            "font__button--font-weight" : "700",
+            "font__button--font-size" : "15px",
+            "font__button--font-weight" : "300",
             "font__button--line-height" : "44px",
-            "font__button--letter-spacing" : "2px"
+            "font__button--letter-spacing" : "1px"
         },
         "gallery": {
             "color__gallery-caption--background" : "#26292f",
@@ -224,6 +224,11 @@
             "color__feature-button--text" : "@color__body--background",
             "color__feature-button--border" : "fade(@color__body--background, 10%)",
             "color__feature-button--background" : "transparent"
+        },
+        "twitter": {
+            "color__twitter-item--background": "#fff",
+            "color__twitter-account-name--text":"@color-swatch4",
+            "color__twitter-tweet--text": "@color-swatch5"
         },
         "menu": {
             "color__menusections--background" : "@color__secondary",

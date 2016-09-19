@@ -126,7 +126,6 @@ body {
 // ------------------------------
 
 .page--default {
-    margin-bottom: 40px;
     .template-header {
         background-color: @color__footer--background;
         position: relative;
@@ -158,6 +157,20 @@ body {
         .widget__logo {
             margin: 10px!important;
         }
+    }
+    .homepage-nav {
+        margin-top: 0;
+        position: relative;
+        height: 280px;
+    }
+    .main-content {
+        top: -185px;
+    }
+    .contact-footer {
+        margin-top: -300px;
+    }
+    .navigation-item {
+        display: inline-block;
     }
 }
 
@@ -409,6 +422,12 @@ body {
     .js-map {
         height: 400px;
     }
+    .social-item {
+        margin-bottom: 0;
+    }
+    @media @tablet {
+        width: 90%;
+    }
 }
 
 .footer-container {
@@ -505,7 +524,7 @@ body {
         margin-top: 0;
     }
     .contactform__form-group {
-        text-align: left;
+        text-align: center;
     }
 }
 

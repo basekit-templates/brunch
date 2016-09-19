@@ -23,8 +23,7 @@
 
 .contactform__form-group {
 	margin-bottom: 26px;
-    text-align: right;
-
+    text-align: center;
 	@media @bp-global-small {
 		margin-bottom: 16px;
 	}
@@ -48,6 +47,9 @@
 	margin: 0 auto;
 	background-color: @color__form--background;
 	padding: 60px 40px 40px 40px;
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
 
     @media @bp-global-small {
         padding: 60px 40px 30px 40px;
@@ -63,25 +65,23 @@
 
 
 .contactform__legend {
-	position: absolute;
-	top: 0;
-    right: 50%;
-    left: 28%;
+	position: relative;
+	top: 30px;
+    right: 0;
 	color: @color__form-legend--text;
 	background-color: @color__form-legend--background;
-	width: 70px;
     height: 60px;
 	font-family: @font__h2--font-family;
 	font-size: @font__h2--font-size;
 	line-height: @font__h2--line-height;
 	text-align: right;
     text-align: center;
-    margin-top: -30px;
     line-height: 60px;
     -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
     -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
     box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
     text-indent: -9999px;
+    width: 70px;
     &:before {
         content:"\f003";
         width: 100%;
@@ -140,9 +140,9 @@
     background-color: white;
     border-bottom: 0;
     padding: 10px;
-    -webkit-box-shadow:inset 0 0 10px #DEDDDD;
-   -moz-box-shadow:inset 3px 3px 3px #DEDDDD;
-    box-shadow:inset 3px 3px 3px #DEDDDD;
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
     border: 1px solid #F3F1F1;
     &:focus {
         border-color: #DEDDDD;
