@@ -1,0 +1,248 @@
+// -------------------------------------------
+// The Croft Template: CSS > Widgets > Feature
+// -------------------------------------------
+
+
+
+
+// Hero
+// ------------------------------
+
+.hero {
+    position: relative;
+    @media @mobile {
+        .flex-display;
+        .flex-direction(column);
+    }
+
+    [data-widget-type="feature"] {
+        .flex-order(2);
+        z-index: 12;
+    }
+}
+
+
+
+
+// Hero Logo
+// ------------------------------
+
+.hero-logo {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10001;
+    padding: 20px;
+    width: 100%;
+    min-height: 200px;
+    height: 119%;
+    z-index: 30;
+    padding: 0 40px;
+
+    .flex-display;
+    .flex-direction(column);
+    .justify-content(center);
+
+    @media @tablet {
+        bottom: 6%;
+        top: inherit;
+        min-height: inherit;
+        height: inherit;
+    }
+    @media @mobile {
+        bottom: 10%;
+    }
+}
+
+
+
+
+// Feature Overlay Toggle Buttons
+// ------------------------------
+
+[data-widget-type="feature"] .widget-overlay .widget__list {
+    top: 100px!important;
+}
+
+
+
+
+// Feature Background (Image)
+// --------------------------
+
+.feature, .bk-feature {
+    text-align: center;
+    overflow: hidden;
+}
+
+.feature__background-image {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: table;
+    height: 500px;
+    width: 100%;
+    @media @tablet {
+        min-height: 300px;
+        max-height: 500px;
+        background-attachment: scroll!important;
+    }
+    @media @mobile {
+        min-height: 200px;
+        max-height: 400px;
+    }
+    &:after {
+        display: none;
+    }
+}
+
+
+// Feature Content Wrap
+// --------------------
+
+.feature__content-wrap {
+    display: table-cell;
+    padding: 30px 40px;
+    vertical-align: middle;
+    height: 850px;
+    background-color: @color__feature-content--background;
+    @media @tablet {
+        text-align: center;
+    }
+    @media @mobile {
+        padding: 30px 10px;
+        height: 600px;
+    }
+}
+
+.feature__content-inner-wrap {
+    margin: 0 auto;
+    max-width: 50%;
+    padding: 80px;
+    @media only screen and (max-width: 1024px) {
+        max-width: 65%;
+    }
+    @media @tablet {
+        max-width: 80%;    
+        padding: 20px;
+    }
+}
+
+// Feature Content
+// ---------------
+
+
+// Feature Headline
+.feature__headline {
+    display: inline;
+    max-width: 140px;
+    padding-bottom: 10px;
+    background: linear-gradient(white,white), linear-gradient(white,white);
+    background-size: 0, 20px 10px;
+    background-repeat: repeat-x;
+    background-position-y: 80%;
+    @media @tablet {
+        font-size: bkscale(@font-swatch8-font-size,0.8);
+        line-height: bkscale(@font-swatch8-line-height,0.6);
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch8-font-size,0.7);
+        line-height: bkscale(@font-swatch8-line-height,0.6);
+    }
+}
+
+// Feature Strapline
+.feature__strapline {
+    margin-top: 20px;
+    @media @tablet {
+        font-size: bkscale(@font-swatch9-font-size,0.9);
+        line-height: bkscale(@font-swatch9-line-height,0.8);
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch9-font-size,0.8);
+        line-height: bkscale(@font-swatch9-line-height,0.7);
+    }
+}
+
+
+// Feature Button
+// ---------------
+
+.feature__button { 
+    margin: 10px 0 0 0;
+    background-color: @color-swatch2;
+    &:hover {
+        background-color: darken(@color-swatch2,10%);
+        &:after {
+            color: lighten(@color-swatch2,10%);
+        }
+    } 
+}
+
+
+
+// Feature Overlay
+// ------------------------------
+
+
+[data-widget-type="feature"] ul.widget__list.list--options {
+    position: absolute;
+    top: auto !important;
+    bottom: 0 !important;
+}
+
+
+
+
+// Feature Arrow
+// ------------------------------
+
+.feature-arrow {
+    position: absolute;
+    top: calc(@value__feature--height--desktop - 100px);
+    z-index: 9999;
+    max-width: @value__container--width;
+    opacity: .6;
+
+    @media @bp-global-above-fullwidth {
+        width: 90%;
+    }
+    @media @bp-global-below-fullwidth {
+        width: 100%;
+    }
+    @media @bp-global-medium {
+        top: @value__feature--height--tablet;
+    }
+    @media @tablet {
+        top: calc(@value__feature--height--tablet - 100px);
+    }
+    @media @mobile {
+        display: none;
+    }
+}
+
+.feature-arrow-link {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: @color-swatch2;
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+
+    background-image: image('/images/down-arrow.png');
+    background-image: image('/images/down-arrow.svg');
+}
+
+
+
+
+

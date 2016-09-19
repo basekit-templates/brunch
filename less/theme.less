@@ -1,0 +1,546 @@
+// -------------------------------------
+// The Croft Template: LESS > Theme
+// -------------------------------------
+
+
+
+// ------------------------------
+// #Table of Contents
+// ------------------------------
+
+//  #Global Breakpoints
+//  #Site Styles
+//  #Page Styles
+//  #Page Default
+//  #Header
+//  #Footer
+
+
+
+
+// ------------------------------
+// #Global Breakpoints
+// ------------------------------
+
+// Page is contained and centered
+@bp-global-above-fullwidth: ~"only screen and (min-width: 1800px)";
+
+// Page displayed full width
+@bp-global-below-fullwidth: ~"only screen and (max-width: 1800px)";
+
+@bp-global-large: 	~"only screen and (min-width: 1400px)";
+@bp-global-medium: 	~"only screen and (min-width: 770px) and (max-width: 1400px)";
+@bp-global-small: 	~"only screen and (max-width: 769px)";
+@mobile: ~"only screen and (max-width: 650px)";
+
+// When specific styles for responsive columns styles are applied
+@bp-global-columns: ~"only screen and (min-width: 478px)";
+
+
+
+// ------------------------------
+// Site Styles
+// ------------------------------
+
+
+body {
+    background-color: @color__body--background;
+}
+
+.container {
+    width: 100%;
+}
+
+.page--home {
+    margin-bottom: 60px;
+}
+
+// Main
+.main-content {
+    position: relative;
+    z-index: 29;
+    background-color: @color__container--background;
+    height: 110%;
+    background: -webkit-gradient(linear,left top,left bottom,from(@color__container--background),to(@color__container--background));
+    background: -webkit-linear-gradient(top,@color__container--background,@color__container--background);
+    background: -moz-linear-gradient(top,@color__container--background,@color__container--background);
+    background: -ms-linear-gradient(top,@color__container--background,@color__container--background);
+    background: -o-linear-gradient(top,@color__container--background,@color__container--background);
+    -webkit-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+    top: -75px;
+    padding-bottom: 200px;
+
+    .container {
+        -webkit-transform: skew(0deg, 3deg);
+        transform: skew(0deg, 3deg);
+        padding-top: 8%;
+    }
+
+    .widget:first-child {
+        margin: 0 0 30px 0;
+    }
+
+}
+
+
+
+// ------------------------------
+// Page Styles
+// ------------------------------
+
+
+// Page Title
+.pagetitle {
+    padding: 6px 70px;
+    background-color: darken(@color__container--background, 4%);
+    border-bottom: 1px solid darken(@color__container--background, 10%);
+    text-align: center;
+
+    @media @bp-global-medium {
+        padding: 6px 40px;
+    }
+    @media @bp-global-small {
+        padding: 6px 20px;
+    }
+}
+
+// Page Title Text
+.pagetitle-text {
+    padding-bottom: 0;
+    .heading--4;
+
+    @media @mobile {
+        font-size: bkscale(@font__h4--font-size, 0.7);
+        line-height: bkscale(@font__h4--line-height, 0.7);
+        text-align: center;
+    }
+}
+
+
+
+
+// ------------------------------
+// #Page Default
+// ------------------------------
+
+.page--default {
+    margin-bottom: 40px;
+    .template-header {
+        background-color: @color__footer--background;
+        position: relative;
+        .flex-item:first-child {
+            width: 33.33%;
+            @media @mobile {
+                width: 50%;
+            }
+        }
+        .profile {
+            .button {
+                top: 0;
+                @media @tablet {
+                    line-height: 40px;
+                }
+            }
+            .input {
+                color: @color__container--background;
+            }
+        }
+        .company-link {
+            color: @font-swatch10-color;
+        }
+        .container {
+            @media @tablet {
+                padding: 0;
+            }
+        }
+        .widget__logo {
+            margin: 10px!important;
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// #Header
+// ------------------------------
+
+.template-header {
+    position: absolute;
+    top: 0;
+    z-index: 10001;
+    max-width: 100%;
+    padding: 20px 40px;
+    width: 100%;
+
+    @media @bp-global-below-fullwidth {
+        width: 100%;
+    }
+    @media @bp-global-medium {
+        padding: 30px 40px;
+    }
+    @media @tablet {
+        border: 0;
+    }
+    @media @mobile {
+        order: 1;
+        padding: 20px 10px 10px 0px;
+    }
+
+
+    // Container
+	.container {
+		.flex-display;
+		.justify-content(space-between);
+        .align-items(center);
+
+        @media @mobile {
+            display: block;
+        }
+	}
+
+    // Flex Item
+    .flex-item {
+        width: 33.333%;
+        &:last-child {
+            text-align: right;
+        }
+
+        @media @tablet {
+            background-color: transparent;
+            border: 0;
+
+            &:first-child,
+            &:last-child {
+                @media @medium {
+                    width: 50%;
+                }
+            }
+        }
+        @media @mobile {
+            width: 100%;
+
+            &:first-child {
+                .flex-display;
+                .flex-direction(column);
+                .justify-content(center);
+                width: 50%;
+                padding: 0;
+                min-height: 43px;
+            }
+            &:last-child {
+                position: absolute;
+                top: 21px;
+                right: 5px;
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+// Hiding Feature Styles
+// ----------------------------------------
+
+
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header .profile .button {
+    top: 0px;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero-logo {
+    background-color: @color-swatch3;
+    position: relative;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero {
+    height: 100%;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    background-color: @color-swatch3;
+}
+
+
+// Header: Additional
+// ------------------------------
+
+// For default page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header {
+    position: relative;
+    z-index: inherit;
+    width: 100%;
+    background-color: @color__container--background;
+    min-height: auto;
+    border-bottom: 1px solid darken(@color__container--background, 10%);
+
+
+    // Flex Item
+    @media @mobile {
+        .flex-item:first-child,
+        .flex-item:last-child {
+            background-color: darken(@color__container--background, 4%);
+            border-bottom: 1px solid darken(@color__container--background, 10%);
+        }
+    }
+
+    // Profile Widget
+    .profile {
+
+        p, h2, h3,
+        .phone-number-link,
+        .company-link,
+        .social-link:before,
+        .emailaddress__email,
+        .button {
+            color: @color__companyname--text;
+        }
+
+        // Twitter
+        .tweet-content a {
+            color: white;
+        }
+
+         // Email
+        .emailaddress__email {
+            @media @tablet {
+                color: transparent;
+
+                &:before {
+                    color: @color__h2--text;
+                }
+            }
+        }
+
+        // Form
+        .input {
+            color: @color__h2--text;
+            border-color: darken(@color__container--background, 10%);
+        }
+
+        // Placeholder
+        .input::-webkit-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input:-moz-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input:-ms-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+        .input::-ms-input-placeholder {
+            opacity: .6;
+            color: @color__p--text;
+        }
+
+        // Button
+        .button {
+            position: relative;
+            top: 1px;
+            margin-top: 0;
+            padding: 0 10px;
+            border-left: 0;
+            border-right: 1px solid darken(@color__container--background, 10%);
+        }
+
+    }
+
+    // Comapny Link
+    .company-link {
+        color: @color__h2--text;
+    }
+
+    // Navigation Toggle Button
+    .navigation-toggle {
+        background-color: @color__navigation--text;
+
+        &:after, &:before {
+            background: @color__navigation--text;
+        }
+    }
+    .open .navigation-toggle {
+        background-color: transparent;
+
+        &:after, &:before {
+            background: @color__navigation--text;
+        }
+    }
+    .page--default .template-header .profile .tweet-content a {
+        color: #595959;
+    }
+}
+
+
+// ------------------------------
+// #Footer
+// ------------------------------
+
+.contact-footer-title {
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    position: relative;
+    top: -28px;
+    z-index: 9999;
+    width: 50%;
+    -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    h1, h2, h3, h4, h5, p, a {
+        display: inline-block;
+        color: @color__form-legend--text;
+        background-color: @color__form-legend--background;
+        right: auto;
+        padding: 10px;
+        margin: 0px auto;
+        -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+        -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+        box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+    }
+    .profile__map {
+        border: 15px solid white;
+    }
+    .js-map {
+        height: 400px;
+    }
+}
+
+.footer-container {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 40px 20px 70px 20px;
+    text-align: center;
+    display: block;
+    h3 {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    @media @tablet {
+        max-width: 100%;
+    }
+    @media @mobile {
+        max-width: 100%;
+        display: block;
+    }
+}
+
+.contact-footer {
+    background-color: lighten(@color__footer--background,10%);
+    padding: 0;
+    margin-top: -200px;
+    .flex-item-50 {
+        &:first-child {
+            -webkit-box-ordinal-group: 1;
+            -moz-box-ordinal-group: 1;
+            -webkit-order: 0;
+            -ms-flex-order: 0;
+            order: 0;
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+            margin-right: 30px;
+            width: 100%;
+            @media @mobile {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        &:last-child {
+            -webkit-box-ordinal-group: 2;
+            -moz-box-ordinal-group: 2;
+            -webkit-order: 1;
+            -ms-flex-order: 1;
+            order: 1;
+            -webkit-box-flex: 1;
+            -moz-box-flex: 1;
+            -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+            width: 100%;
+        }
+    }
+    .contactform__legend {
+        position: relative;
+        color: @color__h2--text;
+        font-weight: @font__h2--font-weight;
+        background-color: transparent;
+        text-align: left;
+        padding: 0;
+        margin-bottom: 10px;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-family: @font__h2--font-family;
+        font-size: @font__h2--font-size;
+        margin-top: 0px;
+        box-shadow: none;
+        text-indent: 0;
+        line-height: 32px;
+        &:before {
+            display: none;
+        }
+    }
+    .contactform__form-body {
+        padding: 0;
+        width: 100%;
+    }
+    .contactform__fieldset {
+        margin-top: 0;
+    }
+    .contactform__form-group {
+        text-align: left;
+    }
+}
+
+.footer-content-1 {
+    margin-bottom: 10px;
+}
+
+.template-footer {
+    width: 100%;
+    background-color: @color__footer--background;
+    text-align: center;
+
+    .social-item {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    // Widget
+    .widget {
+        @media @bp-global-large {
+            padding: 20px 70px;
+        }
+        @media @bp-global-medium {
+            padding: 20px 40px;
+        }
+        @media @bp-global-small {
+            padding: 20px 20px;
+        }
+    }
+}
+
+// Fixes overlay issue in the editor when trying to edit the content widget above the footer.
+
+.footer-container .widget-overlay {
+    z-index: 999;
+}
