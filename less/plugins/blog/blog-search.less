@@ -93,6 +93,16 @@
             margin-right: 10px;
         }
 
+        &:last-child {
+
+            .flex(@columns: 0 1 auto);
+            .align-content(@align: flex-end);
+            .align-items(@align: flex-end);
+            .justify-content(@justify: flex-end);
+            .flex-display(@display: flex);
+
+            vertical-align: bottom;
+        }
 
     }
 
