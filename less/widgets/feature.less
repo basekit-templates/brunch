@@ -230,10 +230,12 @@
 
 .feature-arrow-link {
     position: absolute;
-    bottom: 0;
+    top: -30px;
+    left: 40px;
     display: block;
     width: 60px;
     height: 60px;
+    z-index: 99;
     background-color: @color-swatch2;
     -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
     -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
@@ -245,6 +247,8 @@
     @media @tablet {
         width: 50px;
         height: 50px;
+         left: 45%;
+         top: -25px;
     }
 }
 

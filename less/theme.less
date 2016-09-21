@@ -134,12 +134,18 @@ body {
         position: relative;
         height: 270px;
         .flex-item:first-child {
-            width: 33.33%;
             .flex-display(@display: flex);
             .align-items(@align: center);
 
-            @media @mobile {
+            @media @tablet {
                 width: 100%;
+            }
+        }
+        .flex-item {
+            @media @tablet {
+                &:last-child {
+                    display: block!important;
+                }
             }
         }
         .profile {
@@ -212,7 +218,7 @@ body {
 		.justify-content(space-between);
         .align-items(center);
 
-        @media @mobile {
+        @media @tablet {
             display: block;
         }
 	}
