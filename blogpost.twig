@@ -8,11 +8,6 @@
     <header class="template-header">
         <div class="container">
             <div class="flex-item">
-                <div class="widget-profile-header">
-                    {{widget('clicktocall', 'clicktocalldefault', {})|raw}}
-                </div>
-            </div>
-            <div class="flex-item">
                 {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
                 {{widget('companyname', 'companyname', {
                 "business": "profile",
@@ -25,15 +20,15 @@
         </div>
     </header>
 
+    <div class="homepage-nav">
+
+        {{widget('extendednavigation', 'extendednavigation', 
+        {"align":"center"})|raw}}
+                
+    </div>
+
     <!-- Zone Content -->
     <div class="main-content">
-
-        <div class="homepage-nav">
-        
-            {{widget('extendednavigation', 'extendednavigation', 
-            {"align":"center"})|raw}}
-            
-        </div>
 
         <div class="container">
 
@@ -41,6 +36,33 @@
 
         </div>
     </div>
+
+    <!-- Footer -->
+    <div class="contact-footer">
+        <div class="contact-footer-title">
+            {{widget('profile', 'footer-map', { 'profileType':'map' })|raw}}
+        </div>
+        <div class="footer-container">
+                {{widget('content', 'title1', {
+                content: '<h3>Lorem Ipsum</h3>'
+                })|raw}}
+                {{widget('content', 'text1', {
+                content: '<p>Sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliea         commodo.</p>'
+                })|raw}}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="template-footer">
+    
+        <div class="container">
+              {{widget('profile', 'footer-profile', { 'profileType':'socialicons' })|raw}}
+        </div>
+    
+    </footer>
 
 
 </section>
