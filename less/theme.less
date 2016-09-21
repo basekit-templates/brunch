@@ -75,7 +75,10 @@ body {
     .container {
         -webkit-transform: skew(0deg, 3deg);
         transform: skew(0deg, 3deg);
-        padding-top: 8%;
+        padding-top: 6%;
+        @media @tablet {
+            padding-top: 8%;
+        }
     }
 
     .widget:first-child {
@@ -136,7 +139,7 @@ body {
             .align-items(@align: center);
 
             @media @mobile {
-                width: 50%;
+                width: 100%;
             }
         }
         .profile {
@@ -195,10 +198,11 @@ body {
     }
     @media @tablet {
         border: 0;
-        padding: 0 20px;
+        padding: 20px;
     }
     @media @mobile {
         order: 1;
+        padding: 10px;
     }
 
 
@@ -245,18 +249,14 @@ body {
             width: 100%;
 
             &:first-child {
+
                 .flex-display;
                 .flex-direction(column);
                 .justify-content(center);
-                width: 50%;
+
+                width: 100%;
                 padding: 0;
                 min-height: 43px;
-            }
-            &:last-child {
-                position: absolute;
-                top: 21px;
-                right: 5px;
-                width: 50%;
             }
         }
     }
