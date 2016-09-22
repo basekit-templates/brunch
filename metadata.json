@@ -1,21 +1,14 @@
 {
     "name":"Brunch",
     "widgetVersion": 2,
-    "thumbnail":"the-croft.png",
+    "thumbnail":"brunch.png",
     "templateType":"standard",
     "pageTypes": [ "home", "default" ],
-    "screenshot":"the-croft-screenshot.jpg",
+    "screenshot":"brunch-screenshot.jpg",
      "images":[
         "images/image-1.jpg",
-        "images/gallery/gallery-image--1.jpg",
-        "images/gallery/gallery-image--2.jpg",
-        "images/gallery/gallery-image--3.jpg",
-        "images/gallery/gallery-image--4.jpg",
-        "images/gallery/gallery-image--5.jpg",
-        "images/gallery/gallery-image--6.jpg",
-        "images/gallery/gallery-image--7.jpg",
-        "images/gallery/gallery-image--8.jpg",
-        "images/gallery/gallery-image--9.jpg"
+        "images/logo.png",
+        "images/feature-image.jpg"
     ],
     "colorSwatches":
     {
