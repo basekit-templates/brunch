@@ -3,7 +3,10 @@
 // ----------------------------------------------------------------
 
 
-
+.ecomproductslist {
+    background-color: #fff;
+    .box-shadow;
+}
 
 
 // Product Listing Title
@@ -29,15 +32,9 @@
 
 
 .widget__ecomproductslist .form {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-content: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+    .flex-display(@display: flex);
+    .align-content(@align: flex-start);
+    .align-items(@align: center);
 
     @media (max-width: 1024px) {
         display: block;
@@ -100,24 +97,12 @@
 
 
 .ecomproductslist__fieldset--filters .form-body {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-align-content: stretch;
-    -ms-flex-line-pack: stretch;
-    align-content: stretch;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
-    align-items: flex-end;
+    .flex-display(@display: flex);
+    .flex-direction(@direction: row);
+    .flex-wrap(@wrap: wrap);
+    .justify-content(@justify: flex-start);
+    .align-content(@align: stretch);
+    .align-items(@align: flex-end);
 
     @media @bp-global-small {
         // Hack for Mobile IE, needs fixed width
@@ -275,24 +260,12 @@
     // Form Body
 
     .form-body {
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-align-content: stretch;
-        -ms-flex-line-pack: stretch;
-        align-content: stretch;
-        -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
-        align-items: stretch;
+        .flex-display(@display: flex);
+        .flex-direction(@direction: row);
+        .flex-wrap(@wrap: wrap);
+        .justify-content(@justify: space-between);
+        .align-content(@align: stretch);
+        .align-items(@align: stretch);
     }
 
     // Form Group
@@ -408,24 +381,15 @@
 
 
 .product-list {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-align-content: stretch;
-    -ms-flex-line-pack: stretch;
-    align-content: stretch;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
+
+    padding-top: 20px;
+
+    .flex-display(@display: flex);
+    .flex-direction(@direction: row);
+    .flex-wrap(@wrap: wrap);
+    .justify-content(@justify: flex-start);
+    .align-content(@align: stretch);
+    .align-items(@align: stretch);
 }
 
 
@@ -436,44 +400,21 @@
 
 
 .product-item {
-
-    @media @bp-global-large {
-        padding: 40px;
-    }
-
-    @media @bp-global-medium {
-        padding: 30px;
-    }
-
-    @media @bp-global-small {
-        padding: 20px;
-    }
+    padding: 0px 20px 20px;
 
 
 
     // Clickable item, class added via JS
 
     &.clickable {
-    -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1);
-    -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1);
-    -moz-transition: all 200ms ease-in;
-    -moz-transform: scale(1);
-    transition: all 200ms ease-in;
-    transform: scale(1);
         &:hover {
             box-shadow: 0px 0px 150px #D2D2D2;
             background-color: white;
             z-index: 2;
             -webkit-transition: all 200ms ease-in;
-            -webkit-transform: scale(1.5);
             -ms-transition: all 200ms ease-in;
-            -ms-transform: scale(1.5);
             -moz-transition: all 200ms ease-in;
-            -moz-transform: scale(1.5);
             transition: all 200ms ease-in;
-            transform: scale(1.1);
         }
     }
 }
@@ -493,7 +434,7 @@
     // Product Item
 
     .product-item {
-        width: 25%;
+        width: 33.333%;
         margin: 0;
     }
 }

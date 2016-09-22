@@ -18,6 +18,8 @@
     .post-article {
         position: relative;
         margin-bottom: 2em;
+        background-color: #fff;
+        .box-shadow;
     }
 
 
@@ -69,7 +71,7 @@
     }
     .post-body,
     .post-footer {
-        max-width: 66.666%;
+        max-width: 75%;
         margin: 0 auto;
 
         @media @tablet {
@@ -107,9 +109,7 @@
     .post-header {
         background-color: @color__blogpost-title--background;
         padding: 20px 16.666%;
-        -webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
-        -moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
-        box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.05);
+        .box-shadow;
 
         @media @tablet {
             padding: 10px 5%;
@@ -150,6 +150,7 @@
 
     .post-footer {
         position: relative;
+        padding-bottom: 70px;
 
         // Timestamp
 
@@ -182,24 +183,12 @@
 
 
     .post-attributes {
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-align-content: flex-start;
-        -ms-flex-line-pack: start;
-        align-content: flex-start;
-        -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
-        align-items: stretch;
+        .flex-display(@display: flex);
+        .flex-direction(@direction: row);
+        .flex-wrap(@wrap: wrap); 
+        .justify-content(@justify: flex-start);
+        ..align-content(@align: flex-start);
+        .align-items(@align: stretch);
 
         @media @mobile {
             display: block;
@@ -274,7 +263,6 @@
         font-size: 12px;
         letter-spacing: 2px;
         line-height: 1;
-        color: lighten(@color__p--text, 30%);
         display: block;
         margin-bottom: 5px;
         text-transform: uppercase;
@@ -304,6 +292,14 @@
 
 
     }
+
+
+    // Sharing Buttons
+    // ------------------------------
+
+    .button {
+        padding: 0 15px;
+    } 
 
 
 
