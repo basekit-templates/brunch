@@ -65,6 +65,7 @@
             position: relative;
             max-width: 270px;
             height: 40px;
+            padding-left: 3%;
         }
     
         // Gallery Item
@@ -206,8 +207,7 @@
         padding: 20px;
     
         @media @bp-global-large {
-            margin: 70px 70px 70px 176px;
-    
+            margin: 70px 70px 0px 176px;
         }
         @media @bp-global-medium {
             margin: 40px;
@@ -290,6 +290,14 @@
     .product-title {
         padding-bottom: 0;
         color: @color__ecomproduct-title--text;
+        @media @tablet {
+            font-size: bkscale(@font__h1--font-size, 0.8);
+            line-height: bkscale(@font__h1--line-height, 0.8);
+        }
+        @media @mobile {
+            font-size: bkscale(@font__h1--font-size, 0.7);
+            line-height: bkscale(@font__h1--line-height, 0.7);
+        }
     }
     
     

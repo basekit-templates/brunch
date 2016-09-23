@@ -440,18 +440,35 @@ body {
     padding: 20px;
     z-index: 99999;
     .box-shadow;
-    h1, h2, h3, h4, h5, p, a {
+    h1, h2, h3, h4, h5 {
         display: inline-block;
         color: @color__form-legend--text;
         right: auto;
         padding: 10px;
         margin: 0px auto;
     }
+    p, a {
+        color: @color__p--text;
+    }
     .js-map {
         height: 400px;
     }
     .social-item {
         margin-bottom: 0;
+    }
+    .tweet-item {
+        box-shadow: none;
+    }
+    .signupform__form {
+        margin-bottom:
+    }
+    .profile .legend {
+        margin-bottom: 10px;
+    }
+    input[type="email"] {
+        @media @mobile {
+            height: 36px;
+        }
     }
     @media @tablet {
         width: 90%;
@@ -479,6 +496,12 @@ body {
         max-width: 100%;
         display: block;
         padding: 50px 20px;
+    }
+}
+
+.page--default {
+    .contact-footer {
+        margin-top: -150px;
     }
 }
 
