@@ -238,7 +238,8 @@
         "ecommerce": {
             "color__ecomproductslist-product-title--text" : "@color__p--text",
             "color__ecomproduct-title--text" : "@color__h2--text",
-            "color__ecomproduct-price--text" : "@color__p--text"
+            "color__ecomproduct-price--text" : "@color__p--text",
+            "color__ecomproduct-price--text" : "@color-swatch2"
         }
     }
 }

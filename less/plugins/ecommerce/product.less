@@ -297,7 +297,7 @@
 
 
 .product-content {
-    padding: 20px 60px;
+    padding: 20px 40px;
 }
 
 
@@ -362,8 +362,8 @@
 
     .select-wrap {
         margin-top: 6px;
-        padding: 4px 20px 0px 14px;
-        background-color: white!important;
+        padding: 0;
+        background-color: #fff!important;
 
         &:after {
             padding-right: 14px;
@@ -445,7 +445,6 @@
 
     .product-attribute-title {
         line-height: 2;
-        color: fade(@color__p--text, 80%);
         padding: 0;
         display: block;
         margin: 0 0 0.25em 0;
@@ -506,6 +505,7 @@
 
 
     .category-link, .tag-link {
+        color: @color-swatch2;
         .underline;
         font-size: 14px;
 
@@ -518,5 +518,19 @@
             font-size: bkscale(@font__p--font-size, 0.8);
             line-height: bkscale(@font__p--line-height, 0.8);
         }
+    }
+}
+
+
+
+
+// ------------------------------
+// Product Buttons
+// ------------------------------
+
+.ecom-product-go-to-checkout-btn {
+    background-color: @color-swatch2;
+    &:hover {
+        background-color: darken(@color-swatch2, 5%);
     }
 }

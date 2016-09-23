@@ -251,7 +251,7 @@
 // ------------------------------
 
 .listing-footer {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 
@@ -393,7 +393,7 @@
 
 .product-list {
 
-    padding-top: 20px;
+    padding: 20px;
 
     .flex-display(@display: flex);
     .flex-direction(@direction: row);
@@ -413,7 +413,9 @@
 .product-item {
     padding: 0px 20px 20px;
 
-
+    @media @tablet {
+        20px;
+    }
 
     // Clickable item, class added via JS
 
