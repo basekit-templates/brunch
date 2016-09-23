@@ -288,9 +288,8 @@
 
         .post-article {
             width: 100%;
-            &:nth-child(3n+2) {
-                margin: 2% 2% 0% 2%!important;
-            }
+            margin: 0;
+            margin-bottom: 20px;
         }
 
         // Post Content
@@ -312,12 +311,6 @@
             position: relative;
             margin: 0;
         }
-
-        // Pagination List
-
-        .pagination-list {
-            margin: 20px;
-        }
     }
 
     // 3 and 4 columns
@@ -331,6 +324,7 @@
     .columns-three-left,
     .columns-three-right,
     .columns-three-middle {
+        
         .post-items {
 
             display: block;
@@ -338,7 +332,9 @@
             // Post Article
 
             .post-article {
-                width: auto;
+                width: 100%;
+                margin: 0;
+                margin-bottom: 20px;
             }
 
             // Post Content

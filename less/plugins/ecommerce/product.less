@@ -48,7 +48,7 @@
             position: absolute;
             top: 70px;
             left: 70px;
-            height: 560px;
+            height: 350px;
             margin: 0;
         }
     
@@ -203,7 +203,7 @@
     
     .product-image {
         background-color: #fff;
-        padding: 10px;
+        padding: 20px;
     
         @media @bp-global-large {
             margin: 70px 70px 70px 176px;
@@ -512,6 +512,36 @@
         background-color: @color-swatch2;
         &:hover {
             background-color: darken(@color-swatch2, 5%);
+        }
+    }
+
+}
+
+// -----------------------------
+// #Responsive Columns
+// -----------------------------
+
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+    // 3 and 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+        
+        .ecomproduct .product-content {
+            padding: 20px;
         }
     }
 
