@@ -136,12 +136,11 @@
     .fieldset--filters .form-group {
         min-width: 15%;
         width: auto;
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
         margin-right: 5%;
         width: 24%;
         margin-bottom: 0;
+
+        .flex(1 1 auto);
     
         &:last-of-type {
             margin-right: 0;
@@ -293,9 +292,7 @@
     // First Form Group
 
     .form-group:first-of-type {
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
+        .flex(1 1 auto);
     }
 
     // Last Form Group
