@@ -1,47 +1,52 @@
 // -----------------------------------------------------------------
-// The Croft Template: CSS > Plugins > Ecommerce > Featured Products
+// Brunch Template: CSS > Plugins > Ecommerce > Featured Products
 // -----------------------------------------------------------------
 
 
-// Featured Products Container
-// -------------------------------
+.ecomfeaturedproducts {
 
-.ecomfeaturedproducts__listing-section {
-    background-color: #fff;
-    .box-shadow;
+
+
+    // Featured Products Container
+    // -------------------------------
+    
+    .listing-section {
+        background-color: #fff;
+        .box-shadow;
+    }
+    
+    
+    // Featured Product Listing Title
+    // -------------------------------
+    
+    
+    .listing-title {
+        background-color: @color__secondary;
+        font-family: @font__h2--font-family;
+        font-size: @font__h2--font-size;
+        color: @color__button--text;
+    
+        @media @bp-global-large {
+             padding: 26px 70px;
+             padding: 26px!important;
+        }
+    
+        @media @bp-global-medium {
+            padding: 20px 40px;
+            padding: 20px!important;
+            font-size: bkscale(@font__h2--font-size, 0.8);
+            line-height: bkscale(@font__h2--line-height, 0.8);
+        }
+    
+        @media @bp-global-small {
+            padding:  20px;
+            padding: 20px!important;
+            font-size: bkscale(@font__h2--font-size, 0.7);
+            line-height: bkscale(@font__h2--line-height, 0.7);
+        }
+    }
+
 }
-
-
-// Featured Product Listing Title
-// -------------------------------
-
-
-.ecomfeaturedproducts__listing-title {
-    background-color: @color__secondary;
-    font-family: @font__h2--font-family;
-    font-size: @font__h2--font-size;
-    color: @color__button--text;
-
-    @media @bp-global-large {
-         padding: 26px 70px;
-         padding: 26px!important;
-    }
-
-    @media @bp-global-medium {
-        padding: 20px 40px;
-        padding: 20px!important;
-        font-size: bkscale(@font__h2--font-size, 0.8);
-        line-height: bkscale(@font__h2--line-height, 0.8);
-    }
-
-    @media @bp-global-small {
-        padding:  20px;
-        padding: 20px!important;
-        font-size: bkscale(@font__h2--font-size, 0.7);
-        line-height: bkscale(@font__h2--line-height, 0.7);
-    }
-}
-
 
 
 // Columns variations

@@ -1,184 +1,185 @@
 // ----------------------------------------------------------------
-// The Croft Template: CSS > Plugins > Ecommerce > Products Listing
+// Brunch Template: CSS > Plugins > Ecommerce > Products Listing
 // ----------------------------------------------------------------
 
 
 .ecomproductslist {
     background-color: #fff;
     .box-shadow;
-}
 
 
-// Product Listing Title
-// ------------------------------
-
-
-.ecomproductslist__listing-title {
-    display: none;
-}
-
-
-
-
-// ------------------------------
-// Product Listing Filters
-// ------------------------------
-
-
-
-
-// Product Search in Widget
-// ------------------------------
-
-
-.widget__ecomproductslist .form {
-    .flex-display(@display: flex);
-    .align-content(@align: flex-start);
-    .align-items(@align: center);
-    padding: 20px;
-
-    @media (max-width: 1024px) {
-        display: block;
+    // Product Listing Title
+    // ------------------------------
+    
+    
+    .listing-title {
+        display: none;
     }
-
-    @media @mobile {
-        padding: 10px 0;
+    
+    
+    
+    
+    // ------------------------------
+    // Product Listing Filters
+    // ------------------------------
+    
+    
+    
+    
+    // Product Search in Widget
+    // ------------------------------
+    
+    
+    .form {
+        .flex-display(@display: flex);
+        .align-content(@align: flex-start);
+        .align-items(@align: center);
+        padding: 20px;
+    
+        @media (max-width: 1024px) {
+            display: block;
+        }
+    
+        @media @mobile {
+            padding: 10px 0;
+        }
+    
+        // Fieldset Search
+    
+        .fieldset--search {
+            padding: 0px 20px 0 0;
+            width: 50%;
+    
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
+    
+            @media (max-width: 1024px) {
+                padding: 20px 40px 10px;
+            }
+    
+            @media @bp-global-small {
+                padding: 14px 20px;
+            }
+        }
     }
-
-    // Fieldset Search
-
-    .fieldset--search {
-        padding: 0px 20px 0 0;
+    
+    
+    
+    
+    // Products List Fieldset Filters
+    // ------------------------------
+    
+    .product-filters {
+        border-bottom: 1px solid darken(@color__container--background, 10%);
+    
+        .form-group {
+            margin-right: 0;
+        }
+    }
+    
+    
+    .fieldset--filters {
         width: 50%;
-
+        // background-color: @color__ecomproductslist-filters--background;
+    
         @media (max-width: 1024px) {
             width: 100%;
+            padding: 10px 40px;
         }
-
-        @media (max-width: 1024px) {
-            padding: 20px 40px 10px;
-        }
-
         @media @bp-global-small {
-            padding: 14px 20px;
+            padding: 10px 20px;
         }
     }
-}
-
-
-
-
-// Products List Fieldset Filters
-// ------------------------------
-
-.product-filters {
-    border-bottom: 1px solid darken(@color__container--background, 10%);
-
-    .form-group {
-        margin-right: 0;
-    }
-}
-
-
-.ecomproductslist__fieldset--filters {
-    width: 50%;
-    // background-color: @color__ecomproductslist-filters--background;
-
-    @media (max-width: 1024px) {
-        width: 100%;
-        padding: 10px 40px;
-    }
-    @media @bp-global-small {
-        padding: 10px 20px;
-    }
-}
-
-
-
-
-// Form Body
-// ------------------------------
-
-
-.ecomproductslist__fieldset--filters .form-body {
-    .flex-display(@display: flex);
-    .flex-direction(@direction: row);
-    .flex-wrap(@wrap: wrap);
-    .justify-content(@justify: flex-start);
-    .align-content(@align: stretch);
-    .align-items(@align: flex-end);
-
-    @media @bp-global-small {
-        // Hack for Mobile IE, needs fixed width
-        width: 100px;
-        min-width: 100%;
-    }
-
-}
-
-
-
-
-// Product Listing Legend
-// ------------------------------
-
-
-.ecomproductslist__legend {
-    display: none;
-}
-
-
-
-
-// Product Listing Form Group
-// ------------------------------
-
-
-.ecomproductslist__fieldset--filters .form-group {
-    min-width: 15%;
-    width: auto;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    margin-right: 5%;
-    width: 24%;
-    margin-bottom: 0;
-
-    &:last-of-type {
-        margin-right: 0;
-    }
-
-
-    @media @mobile {
-        width: 100%;
-        margin-bottom: 8px;
-        margin-right: 0;
-    }
-
-
-    // Label
-
-    .label {
-        padding: 5px 0;
-        font-family: @font__h4--font-family;
-        font-size: 12px;
-        letter-spacing: 2px;
-        line-height: 1;
-        display: block;
-        margin-bottom: 5px;
-        text-transform: uppercase;
-    }
-
-    // Select Wrap
-
-    .select-wrap {
-        @media @bp-global-medium {
-            .select.medium;
+    
+    
+    
+    
+    // Form Body
+    // ------------------------------
+    
+    
+    .fieldset--filters .form-body {
+        .flex-display(@display: flex);
+        .flex-direction(@direction: row);
+        .flex-wrap(@wrap: wrap);
+        .justify-content(@justify: flex-start);
+        .align-content(@align: stretch);
+        .align-items(@align: flex-end);
+    
+        @media @bp-global-small {
+            // Hack for Mobile IE, needs fixed width
+            width: 100px;
+            min-width: 100%;
         }
+    
+    }
+    
+    
+    
+    
+    // Product Listing Legend
+    // ------------------------------
+    
+    
+    .legend {
+        display: none;
+    }
+    
+    
+    
+    
+    // Product Listing Form Group
+    // ------------------------------
+    
+    
+    .fieldset--filters .form-group {
+        min-width: 15%;
+        width: auto;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        margin-right: 5%;
+        width: 24%;
+        margin-bottom: 0;
+    
+        &:last-of-type {
+            margin-right: 0;
+        }
+    
+    
         @media @mobile {
-            .select.small;
+            width: 100%;
+            margin-bottom: 8px;
+            margin-right: 0;
+        }
+    
+    
+        // Label
+    
+        .label {
+            padding: 5px 0;
+            font-family: @font__h4--font-family;
+            font-size: 12px;
+            letter-spacing: 2px;
+            line-height: 1;
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+    
+        // Select Wrap
+    
+        .select-wrap {
+            @media @bp-global-medium {
+                .select.medium;
+            }
+            @media @mobile {
+                .select.small;
+            }
         }
     }
+
 }
 
 

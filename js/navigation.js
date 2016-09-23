@@ -1,5 +1,5 @@
 // -------------------------------------
-// Kings Template: JS > Navigation
+// Brunch Template: JS > Navigation
 // -------------------------------------
 
 $(document).each(function() {
