@@ -326,9 +326,10 @@ body {
     position: relative;
     z-index: inherit;
     width: 100%;
-    background-color: @color__container--background;
+    background-color: @color__footer--background;
     min-height: auto;
     border-bottom: 1px solid darken(@color__container--background, 10%);
+    z-index: 99;
 
 
     // Flex Item
@@ -402,11 +403,6 @@ body {
             border-right: 1px solid darken(@color__container--background, 10%);
         }
 
-    }
-
-    // Comapny Link
-    .company-link {
-        color: @color__h2--text;
     }
 
     // Navigation Toggle Button
