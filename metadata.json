@@ -167,9 +167,9 @@
         "navigation": {
             "font__navigation--font-family": "@font-swatch6-font-family",
             "font__navigation--font-size": "20px",
-            "font__navigation--font-weight": "700",
+            "font__navigation--font-weight": "400",
             "font__navigation--line-height": "26px",
-            "font__navigation--letter-spacing": "1px",
+            "font__navigation--letter-spacing": "0px",
             "color__navigation--text": "#fff",
             "color__navigation--text--selected": "darken(@color-swatch3,10%)",
             "color__navigation--background": "@color-swatch3"
@@ -201,7 +201,7 @@
             "color__slideshow-description--text" : "#bebebe"
         },
         "feature": {
-            "color__feature-content--background": "fade(#000000,10%)",
+            "color__feature-content--background": "fade(#000000,15%)",
             "font__feature-headline--font-family" : "@font-swatch8-font-family",
             "font__feature-headline--font-size" : "70px",
             "font__feature-headline--font-weight" : "700",
