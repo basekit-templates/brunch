@@ -84,6 +84,10 @@
         .profile__signupform {
             float: right;
             margin-left: 0px;
+            @media @mobile {
+                float: inherit;
+                max-height: inherit!important;
+            }
         }
     }
 
@@ -133,6 +137,9 @@
     .profile {
         .input {
             border: 2px solid #e6e6e6;
+            &:hover {
+                background-color: transparent!important;
+            }
         }
         .button {
             border-right: 2px solid #e6e6e6;
@@ -324,11 +331,15 @@
         }
 
         .legend {
-            display: none;
+            display: block;
+            margin-bottom: 0!important;
         }
 
         .form-body {
             .justify-content(inherit);
+            @media @mobile {
+                .justify-content(center);
+            }
         }
 
         // Input
@@ -455,6 +466,9 @@
     .container {
         width: 960px;
         margin: 0px auto;
+        @media @tablet {
+            width: 100%;
+        }
     }
     .signupform__button {
         @media @mobile {
