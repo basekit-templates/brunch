@@ -13,7 +13,7 @@
     z-index: 99999;
     background-color: @color__navigation--background;
     .box-shadow;
-    @media @bp-global-large {
+    @media @bp-change-nav {
         padding: 0;
         position: absolute;
         width: 80%;
@@ -79,7 +79,7 @@
 
 .navigation-item {
     display: block;
-    @media @bp-global-large {
+    @media @bp-change-nav {
         display: inline-block;
     }
 }
@@ -178,7 +178,7 @@
 }
 
 .navigation-item.folder-open .navigation-list--children {
-    @media @bp-global-large {
+    @media @bp-change-nav {
         position: absolute;
         width: 100%;
         top: 100%;
@@ -191,7 +191,7 @@
 }
 
 .navigation-item--child {
-    @media @bp-global-large {
+    @media @bp-change-nav {
         display: inline-block;
     }
 }
@@ -202,7 +202,7 @@
     background-color: white;
     .box-shadow;
 
-    @media @bp-global-large {
+    @media @bp-change-nav {
         display: none;
     }
 
@@ -239,7 +239,7 @@
             font-size: 0.8em;
         }
         .navigation-item.open & {
-            @media @bp-global-large {
+            @media @bp-change-nav {
                 -webkit-transform: rotate(90deg);
                 -moz-transform: rotate(90deg);
                 -o-transform: rotate(90deg);
