@@ -6,23 +6,25 @@
 // --------------
 
 .homepage-nav {
-    top: 19%;
+    top: 27%;
     padding: 10px;
     position: fixed;
     right: 0;
     z-index: 99999;
     background-color: @color__navigation--background;
     .box-shadow;
-    @media @tablet {
+    @media @bp-global-large {
         padding: 0;
         position: absolute;
         width: 80%;
         left: 0;
         margin: -105px auto 0;
         top: inherit;
+        padding: 5px 0;
     }
     @media @mobile {
         width: 90%;
+        padding: 0;
     }
 }
 
@@ -77,21 +79,22 @@
 
 .navigation-item {
     display: block;
-    @media @tablet {
+    @media @bp-global-large {
         display: inline-block;
     }
 }
 
 .navigation-item .item-name {
     padding: 12px 20px;
+    text-transform: uppercase;
 
     &:hover {
         color: @color__navigation--text--selected;
     }
 
     @media @tablet {
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 14px;
+        line-height: 24px;
         padding: 12px 10px;
     }
 }
@@ -175,7 +178,7 @@
 }
 
 .navigation-item.folder-open .navigation-list--children {
-    @media @tablet {
+    @media @bp-global-large {
         position: absolute;
         width: 100%;
         top: 100%;
@@ -188,7 +191,7 @@
 }
 
 .navigation-item--child {
-    @media @tablet {
+    @media @bp-global-large {
         display: inline-block;
     }
 }
@@ -199,14 +202,14 @@
     background-color: white;
     .box-shadow;
 
-    @media @tablet {
+    @media @bp-global-large {
         display: none;
     }
 
     .navigation-item .item-name {
         padding: 10px 20px;
 
-        @media @tablet {
+        @media @bp-global-large {
             padding: 15px 10px 0px;
         }
     }
@@ -231,12 +234,12 @@
         margin-left: 4px;
         border: 5px solid transparent;
         border-top-color: @color__navigation--text;
-        @media @tablet {
+        @media @bp-global-large {
             content: "";
             font-size: 0.8em;
         }
         .navigation-item.open & {
-            @media @tablet {
+            @media @bp-global-large {
                 -webkit-transform: rotate(90deg);
                 -moz-transform: rotate(90deg);
                 -o-transform: rotate(90deg);

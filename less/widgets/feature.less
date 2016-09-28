@@ -108,7 +108,7 @@
 
 .feature__content-wrap {
     display: table-cell;
-    padding: 30px 40px 80px;
+    padding: 30px 40px 60px;
     vertical-align: middle;
     height: 800px;
     background-color: @color__feature-content--background;
@@ -143,7 +143,7 @@
     background: linear-gradient(white,white), linear-gradient(white,white);
     background-size: 0, 20px 10px;
     background-repeat: repeat-x;
-    background-position-y: 80%;
+    background-position: 0 80%;
     @media @tablet {
         font-size: bkscale(@font-swatch8-font-size,0.8);
         line-height: bkscale(@font-swatch8-line-height,0.8);
@@ -234,7 +234,7 @@
     background-image: image('/images/down-arrow.svg');
     .box-shadow;
 
-    @media @tablet {
+    @media @bp-global-large {
         display: none;
     }
 }

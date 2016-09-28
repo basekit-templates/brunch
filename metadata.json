@@ -166,10 +166,10 @@
         },
         "navigation": {
             "font__navigation--font-family": "@font-swatch6-font-family",
-            "font__navigation--font-size": "20px",
+            "font__navigation--font-size": "16px",
             "font__navigation--font-weight": "400",
             "font__navigation--line-height": "26px",
-            "font__navigation--letter-spacing": "0px",
+            "font__navigation--letter-spacing": "2px",
             "color__navigation--text": "#fff",
             "color__navigation--text--selected": "darken(@color-swatch3,10%)",
             "color__navigation--background": "@color-swatch3"
