@@ -20,7 +20,7 @@
         left: 0;
         margin: -105px auto 0;
         top: inherit;
-        padding: 5px 0;
+        padding: 10px 0;
     }
     @media @mobile {
         width: 90%;
@@ -41,12 +41,12 @@
 
 .navigation-body {
 
-    @media @tablet {
+    @media @bp-change-nav {
         overflow-x: auto;
         padding: 0 10px;
     }
 
-    @media @tablet {
+    @media @bp-change-nav {
         .navigation-list {
 
             .navigation-list--children.extendednavigation__navigation-list {
@@ -64,7 +64,7 @@
     min-width: 100%;
     margin: 0;
 
-    @media @tablet {
+    @media @bp-change-nav {
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -90,6 +90,10 @@
 
     &:hover {
         color: @color__navigation--text--selected;
+    }
+
+    @media @bp-change-nav {
+        padding: 5px 20px;
     }
 
     @media @tablet {
@@ -126,7 +130,7 @@
 .navigation-item.folder {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 
-    @media @tablet {
+    @media @bp-change-nav {
         position: inherit;
     }
 }
@@ -172,7 +176,7 @@
 // }
 
 .navigation-item:hover .navigation-list--children {
-    @media @tablet {
+    @media @bp-change-nav {
         display: none;
     }
 }
