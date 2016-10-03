@@ -438,6 +438,7 @@ body {
 // #Footer
 // ------------------------------
 
+// Contact Footer Title
 .contact-footer-title {
     display: block;
     margin: 0px auto;
@@ -492,6 +493,7 @@ body {
     }
 }
 
+// Footer Container
 .footer-container {
     max-width: 70%;
     margin: 0 auto;
@@ -513,12 +515,14 @@ body {
     }
 }
 
+// Default page footer
 .page--default {
     .contact-footer {
         margin-top: -120px;
     }
 }
 
+// Contact Footer
 .contact-footer {
     background-color: lighten(@color__footer--background,10%);
     padding: 0;
@@ -579,10 +583,12 @@ body {
     }
 }
 
+// Footer content 
 .footer-content-1 {
     margin-bottom: 10px;
 }
 
+// Template Footer
 .template-footer {
     width: 100%;
     background-color: @color__footer--background;
@@ -598,6 +604,9 @@ body {
         padding: 20px 40px;
         @media @bp-global-small {
             padding: 20px 20px;
+        }
+        @media @mobile {
+            padding: 10px 10px;
         }
     }
 }
