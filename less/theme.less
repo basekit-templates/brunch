@@ -141,7 +141,10 @@ body {
         position: relative;
         padding: 30px 40px 120px;
         @media @tablet {
-            padding: 20px 40px 150px;
+            padding: 40px 40px 130px;
+        }
+        @media @mobile {
+            padding: 30px 40px 120px;
         }
         .flex-item:first-child {
             .flex-display(@display: flex);
@@ -211,11 +214,7 @@ body {
             margin-top: 60px;
         }
     }
-
-}
-
-// Main content
-.page--default {
+    // Main content
     .main-content {
         .container {
             padding-top: 4%;
@@ -253,7 +252,6 @@ body {
         padding: 10px;
         text-align: center;
     }
-
 
     // Container
 	.container {
@@ -506,9 +504,9 @@ body {
 
 // Footer Container
 .footer-container {
-    max-width: 70%;
+    max-width: 50%;
     margin: 0 auto;
-    padding: 70px 20px;
+    padding: 50px 20px;
     text-align: center;
     display: block;
     h3 {
