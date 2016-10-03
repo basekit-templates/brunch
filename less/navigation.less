@@ -13,7 +13,7 @@
     z-index: 99999;
     background-color: @color__navigation--background;
     .box-shadow;
-    @media @bp-change-nav {
+    @media @bp-1300px {
         padding: 0;
         position: absolute;
         width: 80%;
@@ -42,12 +42,12 @@
 
 .navigation-body {
 
-    @media @bp-change-nav {
+    @media @bp-1300px {
         overflow-x: auto;
         padding: 0 10px;
     }
 
-    @media @bp-change-nav {
+    @media @bp-1300px {
         .navigation-list {
 
             .navigation-list--children.extendednavigation__navigation-list {
@@ -65,7 +65,7 @@
     min-width: 100%;
     margin: 0;
 
-    @media @bp-change-nav {
+    @media @bp-1300px {
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -80,7 +80,7 @@
 
 .navigation-item {
     display: block;
-    @media @bp-change-nav {
+    @media @bp-1300px {
         display: inline-block;
     }
 }
@@ -93,7 +93,7 @@
         color: @color__navigation--text--selected;
     }
 
-    @media @bp-change-nav {
+    @media @bp-1300px {
         padding: 5px 20px;
     }
 
@@ -131,7 +131,7 @@
 .navigation-item.folder {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 
-    @media @bp-change-nav {
+    @media @bp-1300px {
         position: inherit;
     }
 }
@@ -177,13 +177,13 @@
 // }
 
 .navigation-item:hover .navigation-list--children {
-    @media @bp-change-nav {
+    @media @bp-1300px {
         display: none;
     }
 }
 
 .navigation-item.folder-open .navigation-list--children {
-    @media @bp-change-nav {
+    @media @bp-1300px {
         position: absolute;
         width: 100%;
         top: 100%;
@@ -196,7 +196,7 @@
 }
 
 .navigation-item--child {
-    @media @bp-change-nav {
+    @media @bp-1300px {
         display: inline-block;
     }
 }
@@ -207,7 +207,7 @@
     background-color: white;
     .box-shadow;
 
-    @media @bp-change-nav {
+    @media @bp-1300px {
         display: none;
     }
 
@@ -244,7 +244,7 @@
             font-size: 0.8em;
         }
         .navigation-item.open & {
-            @media @bp-change-nav {
+            @media @bp-1300px {
                 -webkit-transform: rotate(90deg);
                 -moz-transform: rotate(90deg);
                 -o-transform: rotate(90deg);

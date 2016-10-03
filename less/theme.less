@@ -28,7 +28,7 @@
 // Page displayed full width
 @bp-global-below-fullwidth: ~"only screen and (max-width: 1800px)";
 
-@bp-change-nav:   ~"only screen and (max-width: 1300px)";
+@bp-1300px:   ~"only screen and (max-width: 1300px)";
 @bp-global-large: 	~"only screen and (min-width: 1400px)";
 @bp-global-medium: 	~"only screen and (min-width: 770px) and (max-width: 1400px)";
 @bp-global-small: 	~"only screen and (max-width: 769px)";
@@ -140,13 +140,15 @@ body {
         background-color: @color__footer--background;
         position: relative;
         padding: 30px 40px 120px;
+        @media @tablet {
+            padding: 20px 40px 150px;
+        }
         .flex-item:first-child {
             .flex-display(@display: flex);
             .align-items(@align: center);
 
             @media @tablet {
                 width: 100%;
-                padding: 20px 40px 150px;
             }
         }
         .flex-item {
@@ -189,6 +191,9 @@ body {
     }
     .homepage-nav {
         z-index: 999999;
+        @media @bp-1300px {
+            margin: -85px auto 0;
+        }
         @media @tablet {
             margin: -80px auto 0;
         }
