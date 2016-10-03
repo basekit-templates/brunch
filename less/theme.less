@@ -139,7 +139,7 @@ body {
     .template-header {
         background-color: @color__footer--background;
         position: relative;
-        padding: 20px 40px 100px;
+        padding: 30px 40px 120px;
         .flex-item:first-child {
             .flex-display(@display: flex);
             .align-items(@align: center);
@@ -188,7 +188,6 @@ body {
         }
     }
     .homepage-nav {
-        margin-top: 0;
         z-index: 999999;
         @media @tablet {
             margin: -80px auto 0;
@@ -201,6 +200,13 @@ body {
         z-index: 99999;
         margin-top: 20px;
     }
+    .template-title {
+        margin-top: 20px;
+        @media @tablet {
+            margin-top: 60px;
+        }
+    }
+
 }
 
 // Main content
