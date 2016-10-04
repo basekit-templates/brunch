@@ -50,6 +50,10 @@
         padding: 0 10px;
     }
 
+    @media @mobile {
+        padding: 0;
+    }
+
     @media @bp-1300px {
         .navigation-list {
 
@@ -72,6 +76,7 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
+        overflow-x: auto;
     }
 }
 
@@ -216,10 +221,13 @@
 
     .navigation-item .item-name {
         padding: 10px 20px;
-
-        @media @bp-global-large {
-            padding: 15px 10px 0px;
+        @media @tablet {
+            padding: 8px 10px;
         }
+    }
+
+    .item-name {
+        overflow: visible;
     }
 }
 
