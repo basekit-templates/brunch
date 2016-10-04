@@ -166,6 +166,9 @@
     .post-content {
         margin: 0;
         padding: 20px 20px 50px;
+        @media @tablet {
+            padding: 20px;
+        }
     }
 
     // Post Title
@@ -323,14 +326,27 @@
                 margin-bottom: 20px;
             }
 
-            // Post Content
+            // Post Title
 
-            .post-content {
+            .post-title {
+                font-size: 24px;
+                line-height: 36px;
+            }
+
+            // Post Header
+
+            .post-header {
+                margin-bottom: 0;
+            }
+
+            .post-excerpt {
+                margin-bottom: 20px;
             }
 
             // Timestamp
 
             .post-footer .timestamp {
+                bottom: 10px;
             }
         }
     }

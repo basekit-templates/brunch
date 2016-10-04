@@ -130,7 +130,7 @@
             "font__h1--font-family": "@font-swatch1-font-family",
             "font__h1--font-size": "50px",
             "font__h1--font-weight": "@font-swatch1-font-weight",
-            "font__h1--line-height": "64px",
+            "font__h1--line-height": "74px",
             "font__h1--letter-spacing": "@font-swatch1-letter-spacing",
             "color__h1--text": "#d61e1e",
             "font__h2--font-family" : "@font-swatch2-font-family",
