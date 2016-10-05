@@ -75,11 +75,17 @@
         -ms-overflow-style: -ms-autohiding-scrollbar;
         overflow-x: auto;
     }
-    @media @tablet {
-        overflow-x: scroll;
-    }
 }
 
+.js-folder {
+    .navigation-list {
+        @media @tablet {
+        -webkit-overflow-scrolling: inherit;
+        -ms-overflow-style: inherit;
+        overflow-x: scroll;
+        }
+    }
+}
 
 
 
@@ -232,6 +238,9 @@
 
 .navigation-list--children {
     top: 77%!important;
+    @media @mobile {
+        top: 90%!important;
+    }
 }
 
 
