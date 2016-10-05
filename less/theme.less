@@ -97,18 +97,17 @@ body {
     padding-bottom: 100px;
 
     .container {
-        padding-top: 8%;
+        padding-top: 6%;
         max-width: 1024px;
         margin: 0 auto;
         padding-left: 5%;
         padding-right: 5%;
-        @media @tablet {
+        @media @bp-1300px {
             padding-top: 2%;
+        }
+        @media @tablet {
             padding-left: 2%;
             padding-right: 2%;
-        }
-        @media @mobile {
-            padding-top: 2%;
         }
     }
 
@@ -117,9 +116,6 @@ body {
     }
 
 }
-
-
-
 
 // ------------------------------
 // #Page Default
@@ -510,6 +506,22 @@ body {
     }
 }
 
+.page--default {
+    .contact-footer-title {
+        @media @tablet {
+            top: 40px;
+        }
+    }
+    .footer-container {
+        @media @tablet {
+            padding: 90px 20px 50px!important;
+        }
+        @media @mobile {
+            padding: 90px 20px 50px!important;
+        }
+    }
+}
+
 // Footer Container
 .footer-container {
     max-width: 50%;
@@ -601,7 +613,7 @@ body {
     }
 }
 
-
+// Footer Skew
 .contact-footer {
     &:before {
         content:"";
@@ -620,6 +632,35 @@ body {
         top: 0;
         left: 0;
         right: 0;
+    }
+}
+
+.page--default {
+    .contact-footer {
+        @media @tablet {
+        margin-top: -190px;
+            &:before {
+                content:"";
+                display: block;
+                background: -webkit-gradient(linear,left top,left bottom,from(@color__container--background),to(@color__container--background));
+                background: -webkit-linear-gradient(top,@color__container--background,@color__container--background);
+                background: -moz-linear-gradient(top,@color__container--background,@color__container--background);
+                background: -ms-linear-gradient(top,@color__container--background,@color__container--background);
+                background: -o-linear-gradient(top,@color__container--background,@color__container--background);
+                -webkit-transform: skewY(-2deg);
+                -ms-transform: skewY(-2deg);
+                transform: skewY(-2deg);
+                height: 90px;
+                background-color: @color__body--background;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                right: 0;
+            }
+            @media @mobile {
+                top: 0px;
+            }
+        }
     }
 }
 
