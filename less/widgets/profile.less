@@ -135,6 +135,12 @@
 
     // Profile
     .profile {
+
+        .profile__map {
+            @media @tablet {
+                margin-top: 20px;
+            }
+        }
         .input {
             border: 2px solid #e6e6e6;
             background-color: transparent!important;
@@ -448,20 +454,6 @@
 
 }
 
-
-// Widget Profile Header
-// ----------------------------------------
-
-.widget-profile-header {
-    .flex-display(@display: flex);
-    .align-items(@align: center);
-    .map__embed-wrap {
-        width: 300px;
-    }
-    @media @mobile {
-        display: block;
-    }
-}
 
 
 // Footer Profile
