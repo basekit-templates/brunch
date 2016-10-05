@@ -71,7 +71,6 @@
 
     @media @bp-1300px {
         white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
         overflow-x: auto;
     }
@@ -80,8 +79,7 @@
 .js-folder {
     .navigation-list {
         @media @tablet {
-        -webkit-overflow-scrolling: inherit;
-        -ms-overflow-style: inherit;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
         overflow-x: scroll;
         }
     }
