@@ -129,12 +129,12 @@ body {
     .template-header {
         background-color: @color__footer--background;
         position: relative;
-        padding: 30px 40px 120px;
+        padding: 30px 40px 160px;
         @media @tablet {
             padding: 40px 40px 130px;
         }
         @media @mobile {
-            padding: 30px 40px 120px;
+            padding: 30px 40px 160px;
         }
         .flex-item:first-child {
             .flex-display(@display: flex);
@@ -185,10 +185,7 @@ body {
     .homepage-nav {
         z-index: 999999;
         @media @bp-1300px {
-            margin: -85px auto 0;
-        }
-        @media @tablet {
-            margin: -80px auto 0;
+            margin: -123px auto 0
         }
         @media @mobile {
             padding: 0;
@@ -199,9 +196,11 @@ body {
         margin-top: 20px;
     }
     .template-title {
-        margin-top: 20px;
         @media @tablet {
             margin-top: 60px;
+        }
+        @media @mobile {
+            margin-top: 10px;
         }
     }
     // Main content
@@ -226,6 +225,25 @@ body {
     max-width: 100%;
     padding: 20px 40px;
     width: 100%;
+    &:before {
+        content: "";
+        display: block;
+        background: -webkit-gradient(linear,left top,left bottom,from(#f2f2f2),to(#f2f2f2));
+        background: -webkit-linear-gradient(top,#f2f2f2,#f2f2f2);
+        background: -moz-linear-gradient(top,#f2f2f2,#f2f2f2);
+        background: -ms-linear-gradient(top,#f2f2f2,#f2f2f2);
+        background: -o-linear-gradient(top,#f2f2f2,#f2f2f2);
+        -webkit-transform: skewY(-2deg);
+        -ms-transform: skewY(-2deg);
+        transform: skewY(-2deg);
+        height: 100px;
+        background-color: #f2f2f2;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 14;
+    }
 
     @media @bp-global-below-fullwidth {
         width: 100%;
