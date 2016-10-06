@@ -92,7 +92,11 @@ body {
     position: relative;
     background-color: @color__container--background;
     height: 110%;
+    top: -75px;
     padding-bottom: 100px;
+    @media @mobile {
+        top: -35px;
+    }
 
     .container {
         padding-top: 9%;
