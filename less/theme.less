@@ -559,6 +559,24 @@ body {
     padding: 0;
     margin-top: -190px;
     position: relative;
+    &:before {
+        content:"";
+        display: block;
+        background: -webkit-gradient(linear,left top,left bottom,from(@color__container--background),to(@color__container--background));
+        background: -webkit-linear-gradient(top,@color__container--background,@color__container--background);
+        background: -moz-linear-gradient(top,@color__container--background,@color__container--background);
+        background: -ms-linear-gradient(top,@color__container--background,@color__container--background);
+        background: -o-linear-gradient(top,@color__container--background,@color__container--background);
+        -webkit-transform: skewY(-2deg);
+        -ms-transform: skewY(-2deg);
+        transform: skewY(-2deg);
+        height: 100px;
+        background-color: @color__body--background;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        right: 0;
+    }
     @media @mobile {
         margin-top: -170px;
     }
@@ -612,28 +630,6 @@ body {
     }
     .contactform__form-group {
         text-align: center;
-    }
-}
-
-// Footer Skew
-.contact-footer {
-    &:before {
-        content:"";
-        display: block;
-        background: -webkit-gradient(linear,left top,left bottom,from(@color__container--background),to(@color__container--background));
-        background: -webkit-linear-gradient(top,@color__container--background,@color__container--background);
-        background: -moz-linear-gradient(top,@color__container--background,@color__container--background);
-        background: -ms-linear-gradient(top,@color__container--background,@color__container--background);
-        background: -o-linear-gradient(top,@color__container--background,@color__container--background);
-        -webkit-transform: skewY(-2deg);
-        -ms-transform: skewY(-2deg);
-        transform: skewY(-2deg);
-        height: 100px;
-        background-color: @color__body--background;
-        position: absolute;
-        top: -35px;
-        left: 0;
-        right: 0;
     }
 }
 
