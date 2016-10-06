@@ -40,6 +40,9 @@
         right: 0;
         bottom: 20px;
         z-index: 14;
+        @media @mobile {
+            height: 70px;
+        }
     }
 }
 
@@ -138,6 +141,7 @@
     }
     @media @mobile {
         height: 550px;
+        padding: 0px 10px 30px;
     }
 }
 
@@ -163,7 +167,7 @@
     background: linear-gradient(white,white), linear-gradient(white,white);
     background-size: 0, 20px 10px;
     background-repeat: repeat-x;
-    background-position: 0 80%;
+    background-position: 0 100%;
     @media @tablet {
         font-size: bkscale(@font-swatch8-font-size,0.8);
         line-height: bkscale(@font-swatch8-line-height,0.8);
