@@ -129,7 +129,7 @@ body {
         background-color: @color__footer--background;
         position: relative;
         padding: 30px 40px 160px;
-        z-index: 14;
+        z-index: 0;
         &:before {
             content: "";
             display: block;
@@ -202,7 +202,7 @@ body {
         }
     }
     .homepage-nav {
-        z-index: 999999;
+        z-index: 3;
         @media @bp-1300px {
             margin: -123px auto 0
         }
@@ -211,7 +211,6 @@ body {
         }
     }
     .main-content {
-        z-index: 14;
         margin-top: 20px;
     }
     .template-title {
@@ -240,7 +239,7 @@ body {
 .template-header {
     position: absolute;
     top: 0;
-    z-index: 0;
+    z-index: 12;
     max-width: 100%;
     padding: 20px 40px;
     width: 100%;
