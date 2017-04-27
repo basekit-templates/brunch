@@ -29,6 +29,7 @@
 @bp-global-below-fullwidth: ~"only screen and (max-width: 1800px)";
 
 @bp-1300px:   ~"only screen and (max-width: 1300px)";
+@bp-1024px:   ~"only screen and (max-width: 1024px)";
 @bp-global-large: 	~"only screen and (min-width: 1400px)";
 @bp-global-medium: 	~"only screen and (min-width: 770px) and (max-width: 1400px)";
 @bp-global-small: 	~"only screen and (max-width: 769px)";
@@ -110,7 +111,7 @@ body {
             padding-top: 19%;
         }
         @media @mobile {
-            padding-top: 40%;
+            padding-top: 26%;
         }
     }
 
@@ -247,22 +248,20 @@ body {
     position: relative;
     z-index: 12;
     max-width: 100%;
-    padding: 20px 10% 100px;
+    padding: 20px 2% 80px;
     width: 100%;
 
     @media @bp-global-below-fullwidth {
         width: 100%;
     }
     @media @bp-global-medium {
-        padding: 30px 40px;
+        padding: 30px 40px 100px;
     }
     @media @tablet {
         border: 0;
-        padding: 20px;
     }
     @media @mobile {
         order: 1;
-        padding: 10px;
         text-align: center;
     }
 
@@ -347,6 +346,16 @@ body {
     background-color: @color-swatch3;
 }
 
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"] + .template-header + .feature-arrow-link {
+    display: block;
+}
+
+// For home page and when feature is hidden
+.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .feature-arrow-link,
+.template-header + .feature-arrow-link {
+    display: none;
+}
 
 // Header: Additional
 // ------------------------------

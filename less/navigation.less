@@ -13,7 +13,7 @@
     z-index: 15;
     background-color: @color__navigation--background;
     .box-shadow;
-    @media @bp-1300px {
+    @media @bp-1024px {
         padding: 0;
         position: absolute;
         width: 80%;
@@ -44,7 +44,7 @@
 
 .navigation-body {
 
-    @media @bp-1300px {
+    @media @bp-1024px {
         overflow-x: auto;
     }
 
@@ -70,7 +70,7 @@
     min-width: 100%;
     margin: 0;
 
-    @media @bp-1300px {
+    @media @bp-1024px {
         white-space: nowrap;
         -ms-overflow-style: -ms-autohiding-scrollbar;
         overflow-x: auto;
@@ -93,7 +93,7 @@
 
 .navigation-item {
     display: block;
-    @media @bp-1300px {
+    @media @bp-1024px {
         display: inline-block;
     }
 }
@@ -106,7 +106,7 @@
         color: @color__navigation--text--selected;
     }
 
-    @media @bp-1300px {
+    @media @bp-1024px {
         padding: 10px 20px;
     }
 
@@ -144,7 +144,7 @@
 .navigation-item.folder {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 
-    @media @bp-1300px {
+    @media @bp-1024px {
         position: inherit;
     }
 }
@@ -190,13 +190,13 @@
 // }
 
 .navigation-item:hover .navigation-list--children {
-    @media @bp-1300px {
+    @media @bp-1024px {
         display: none;
     }
 }
 
 .navigation-item.folder-open .navigation-list--children {
-    @media @bp-1300px {
+    @media @bp-1024px {
         position: absolute;
         width: 100%;
         top: 77%;
@@ -212,7 +212,7 @@
 }
 
 .navigation-item--child {
-    @media @bp-1300px {
+    @media @bp-1024px {
         display: inline-block;
     }
 }
@@ -266,7 +266,7 @@
             font-size: 0.8em;
         }
         .navigation-item.open & {
-            @media @bp-1300px {
+            @media @bp-1024px {
                 -webkit-transform: rotate(90deg);
                 -moz-transform: rotate(90deg);
                 -o-transform: rotate(90deg);
