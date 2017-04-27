@@ -236,12 +236,18 @@ body {
 // #Header
 // ------------------------------
 
-.template-header {
+[data-widget-type="feature"] + .template-header {
+    background: transparent;
     position: absolute;
     top: 0;
+}
+
+.template-header {
+    background-color: @color__header--background;
+    position: relative;
     z-index: 12;
     max-width: 100%;
-    padding: 20px 40px;
+    padding: 20px 10% 100px;
     width: 100%;
 
     @media @bp-global-below-fullwidth {

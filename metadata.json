@@ -159,7 +159,7 @@
             "color__p--text": "#a3a3a3"
         },
         "header": {
-            "color__header--background" : "transparent"
+            "color__header--background" : "@color-swatch2"
         },
         "footer": {
             "color__footer--background" : "@color-swatch2"
