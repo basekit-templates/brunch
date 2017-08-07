@@ -80,10 +80,17 @@
     }
 }
 
+[data-widget-type="logo"] {
+    @media @mobile {
+        margin: 0 auto;
+    }
+}
+
 .logo__logo-image {
-    max-height: 200px;
+    max-width: 200px;
 
     @media @mobile {
+        max-width: 175px;
         transform:scale(0.8);
     }
 }

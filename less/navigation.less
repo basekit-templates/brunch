@@ -7,26 +7,20 @@
 
 .homepage-nav {
     top: 27%;
-    padding: 20px 10px;
     position: fixed;
     right: 0;
     z-index: 15;
     background-color: @color__navigation--background;
     .box-shadow;
     @media @bp-1300px {
-        padding: 0;
         position: absolute;
         width: 60%;
         left: 0;
         margin: -75px auto 0;
         top: inherit;
     }
-    @media @tablet {
-        padding: 5px 0;
-    }
     @media @mobile {
         width: 80%;
-        padding: 0;
         margin: -55px auto 0;
     }
 }
@@ -43,9 +37,15 @@
 }
 
 .navigation-body {
+    padding: 20px 10px;
 
     @media @bp-1300px {
         overflow-x: auto;
+        padding: 0;
+    }
+
+    @media @tablet {
+        padding: 5px 0;
     }
 
     @media @mobile {
