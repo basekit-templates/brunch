@@ -1,0 +1,211 @@
+// ------------------------------------------------
+// Brunch Template: CSS > Widgets > Contact Form
+// ------------------------------------------------
+
+
+.contactform {
+
+
+    // Fieldset
+    // ------------------------------
+    
+    
+    .fieldset {
+    	position: relative;
+    }
+    
+    
+    
+    
+    // Form Group
+    // ------------------------------
+    
+    
+    .form-group {
+    	margin-bottom: 26px;
+        text-align: center;
+    	@media @bp-global-small {
+    		margin-bottom: 16px;
+    	}
+    
+    
+    	&:last-of-type {
+    		margin-bottom: 0;
+    	}
+    
+    }
+    
+    
+    
+    
+    // Form Body
+    // ------------------------------
+    
+    
+    .form-body {
+    	margin: 0 auto;
+    	background-color: @color__form--background;
+    	padding: 60px 40px 40px 40px;
+        .box-shadow;
+    
+        @media @bp-global-small {
+            padding: 60px 40px 30px 40px;
+            width: 100%;
+        }
+    }
+    
+    
+    
+    
+    // Legend
+    // ------------------------------
+    
+    
+    .legend {
+    	position: relative;
+    	top: 20px;
+        right: 0;
+    	color: @color__form-legend--text;
+    	background-color: @color__form-legend--background;
+        height: 50px;
+    	font-family: @font__h2--font-family;
+    	font-size: @font__h2--font-size;
+    	line-height: @font__h2--line-height;
+    	text-align: right;
+        text-align: center;
+        line-height: 50px;
+        text-indent: -9999px;
+        width: 100%;
+        .box-shadow;
+        &:before {
+            content:"\f003";
+            width: 100%;
+            height: 25px;
+            font-family: 'FontAwesome', sans-serif;
+            display: block;
+            position: absolute;
+            top: 0px;
+            font-size: 16px;
+            font-weight: bold;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            color: white;
+            text-indent: 0;
+        }
+    }
+    
+    
+    
+    
+    // Label
+    // ------------------------------
+    
+    
+    
+    
+    .label {
+        display: none;
+    }
+    
+    .label--message {
+    	 @media @mobile {
+            font-size: bkscale(@font__p--font-size, 0.9);
+        }
+    }
+    
+    
+    
+    
+    // Input and Textarea
+    // ------------------------------
+    
+    
+    .input,
+    .textarea {
+        background-color: #fff;
+        border-bottom: 0;
+        padding: 10px;
+        border: 1px solid #F3F1F1;
+        .box-shadow;
+        &:focus {
+            border-color: #DEDDDD;
+            box-shadow: none;
+        }
+    }
+    
+    
+    // Button
+    // ---------------------
+    
+    .button {
+        text-align: center;
+    }
+
+}
+
+
+
+
+// ---------------------------------
+// Advanced Form
+// ---------------------------------
+
+.widget__advancedcontactform {
+    background-color: @color__form--background;
+    padding: 20px;
+    .legend {
+        color: @color__h2--text;
+        font-family: @font__h2--font-family;
+        font-size: @font__h2--font-size;
+        line-height: @font__h2--line-height;
+    }   
+}
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+.responsivecolumns {
+
+	// Form Body
+	.contactform__form-body {
+		float: none;
+		width: auto;
+		padding: 0;
+        width: 100%;
+        padding: 50px 20px 20px 20px;
+	}
+
+	.contactform__form-group {
+		margin-bottom: 16px;
+	}
+
+    // 4 columns
+    // ------------------------------
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+    
+        // Legend
+
+        .advancedcontactform__legend {
+            width: 100%!important;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .advancedcontactform__form-group {
+            text-align: center;
+        }
+    }
+}
+

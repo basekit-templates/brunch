@@ -1,0 +1,22 @@
+<div class="hero">
+
+    {{widget('feature', 'feature', {
+        'header': 'profile',
+        'strapline': '',
+        'defaultBgImg': asset('images/feature-image.jpg'),
+        'positionTopPercentage': '0',
+        'showBtn': false,
+        'buttonText': 'Lorem Ipsum'
+    })|raw}}
+
+    {% include "includes/header.twig" %}
+
+     <a href="#main-scroll" class="feature-arrow-link  arrow-bounce"></a>
+
+</div>
+
+<div class="homepage-nav">
+
+    {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+            
+</div>

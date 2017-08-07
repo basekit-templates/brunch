@@ -1,0 +1,183 @@
+// -----------------------------------------------
+// Brunch Template: CSS > Plugins > Blog > Blog Search
+// -----------------------------------------------
+
+
+
+
+// Blog Search
+// ------------------------------
+
+
+.widget__blogsearch {
+
+    margin-top: 50px;
+
+    // Legend
+
+    .legend {
+        position: relative;
+        top: 20px;
+        right: 0;
+        color: @color__form-legend--text;
+        background-color: @color__form-legend--background;
+        height: 50px;
+        font-family: @font__h2--font-family;
+        font-size: @font__h2--font-size;
+        line-height: @font__h2--line-height;
+        text-align: right;
+        text-align: center;
+        line-height: 50px;
+        text-indent: -9999px;
+        width: 100%;
+        .box-shadow;
+        &:before {
+            content:"\f002";
+            width: 100%;
+            height: 100%;
+            font-family: 'FontAwesome', sans-serif;
+            display: block;
+            position: absolute;
+            top: 0px;
+            font-size: 16px;
+            font-weight: bold;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            color: white;
+            text-indent: 0;
+        }
+    }
+
+    // Form Body
+
+    .form-body {
+        margin: 0 auto;
+        padding: 60px 40px 40px 40px;
+        background-color: @color__form--background;
+
+        .flex-display(@display: flex);
+        .flex-direction(@direction: row);
+        .flex-wrap(@wrap: nowrap);
+        .justify-content(@justify: flex-start);
+        .align-content(@align: stretch);
+
+        @media @bp-global-small {
+            width: 100%;
+            padding: 50px 30px 30px 30px;
+        }
+    }
+
+    // Form Group
+
+    .form-group {
+        margin-bottom: 0;
+        &:first-child {
+            .flex(1 1 auto);
+            margin-right: 10px;
+        }
+
+        &:last-child {
+
+            .flex(@columns: 0 1 auto);
+            .align-content(@align: flex-end);
+            .align-items(@align: flex-end);
+            .justify-content(@justify: flex-end);
+            .flex-display(@display: flex);
+
+            vertical-align: bottom;
+        }
+
+    }
+
+    // First Form Group
+
+    .blogsearch__form-group:first-child {
+        @media @mobile {
+            margin-right: 3px; // LESS Framework reset
+        }
+    }
+
+    // Last Form Group
+
+    .form-group:last-child {
+        margin: 0;
+    }
+
+    // Button
+
+    .button {
+        @media @tablet {
+            padding: 4px 20px; 
+        }   
+    }
+}
+
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+    // Form Body
+
+    .widget__blogsearch .form-body {
+        width: 100%;
+        padding: 50px 10px 20px 20px;
+    }
+
+    .form-group:last-child {
+        .justify-content(@justify: center);
+    }
+
+
+    // 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+        // Legend
+
+        .label {
+            text-align: center;
+        }
+
+        // Form Body
+
+        .widget__blogsearch .form-body {
+            display: block;
+        }
+
+        // Legend
+
+        .widget__blogsearch .legend {
+            border-bottom: none;
+        }
+
+        // First Form Group
+
+        .widget__blogsearch .form-group:first-child {
+            margin-bottom: 20px;
+        }
+    }
+}

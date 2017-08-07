@@ -1,0 +1,77 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- Page Content -->
+<section class="page  page--home">
+
+	{% include "includes/hero.twig" %}
+
+	<!-- Zone Content -->
+    <div id="main-scroll" class="main-content">
+
+            <div class="container">
+
+                {{zone('main')|raw}}
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<div class="contact-footer">
+    <div class="contact-footer-title">
+        {{widget('profile', 'footer-map', { 'profileType':'map' })|raw}}
+    </div>
+    <div class="footer-container">
+            {{widget('content', 'title1', {
+            content: '<h3>Lorem Ipsum</h3>'
+            })|raw}}
+            {{widget('content', 'text1', {
+            content: '<p>Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliea         commodo.</p>'
+            })|raw}}
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="template-footer">
+
+    <div class="container">
+          {{widget('profile', 'footer-profile', { 'profileType':'socialicons' })|raw}}
+    </div>
+
+</footer>
+
+{% endblock %}
+
+
+{% block bodyscripts %}
+
+<script src="{{asset('js/hero.js')}}"></script>
+
+<!-- Smooth Scroll -->
+<script>
+    $(document).ready(function(){
+
+        $('a[href*=#]').bind('click', function(e) {
+            e.preventDefault();
+
+            var target = $(this).attr("href");
+
+            $('html, body').stop().animate({ scrollTop: $(target).offset().top}, 1000, function() {
+                location.hash = target;
+            });
+
+            return false;
+        });
+
+    });
+
+</script>
+
+{% endblock %}

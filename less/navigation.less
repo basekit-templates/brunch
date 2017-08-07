@@ -1,0 +1,320 @@
+// -----------------------------
+// Brunch: CSS > Navigation
+// -----------------------------
+
+// Homepage Nav
+// --------------
+
+.homepage-nav {
+    top: 27%;
+    position: fixed;
+    right: 0;
+    z-index: 15;
+    background-color: @color__navigation--background;
+    .box-shadow;
+    @media @bp-1300px {
+        position: absolute;
+        width: 60%;
+        left: 0;
+        margin: -75px auto 0;
+        top: inherit;
+    }
+    @media @mobile {
+        width: 80%;
+        margin: -55px auto 0;
+    }
+}
+
+.homepage-nav .main-content .widget {
+    @media @tablet {
+        margin: 0;
+    }
+}
+
+
+.widget__extendednavigation.folder-open:after {
+    background-color: @color__feature-content--background;
+}
+
+.navigation-body {
+    padding: 20px 10px;
+
+    @media @bp-1300px {
+        overflow-x: auto;
+        padding: 0;
+    }
+
+    @media @tablet {
+        padding: 5px 0;
+    }
+
+    @media @mobile {
+        padding: 0;
+    }
+
+    @media @bp-1300px {
+        .navigation-list {
+
+            .navigation-list--children.extendednavigation__navigation-list {
+                background-color: #eaecee;
+            }
+        }
+    }
+}
+
+
+// Navigation List
+// -----------------------------
+
+.navigation-list {
+    min-width: 100%;
+    margin: 0;
+
+    @media @bp-1300px {
+        white-space: nowrap;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        overflow-x: auto;
+    }
+}
+
+.js-folder {
+    .navigation-list {
+        @media @tablet {
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        overflow-x: scroll;
+        }
+    }
+}
+
+
+
+// Navigation Link
+// -----------------------------
+
+.navigation-item {
+    display: block;
+    @media @bp-1300px {
+        display: inline-block;
+    }
+}
+
+.navigation-item .item-name {
+    padding: 8px 20px;
+    text-transform: uppercase;
+    transition: color .35s ease;
+
+    &:hover {
+        color: @color__navigation--text--selected;
+    }
+
+    @media @bp-1300px {
+        padding: 10px 20px;
+    }
+
+    @media @tablet {
+        font-size: 14px;
+        line-height: 24px;
+        padding: 8px 10px;
+    }
+}
+
+
+// Selected Class
+.extendednavigation li.selected > a  {
+    color: @color__navigation--text--selected;
+}
+
+.navigation-item.folder .navigation-item--child a {
+    color: @color__navigation--background;
+}
+
+.extendednavigation__navigation-item.folder.selected span {
+    color: @color__navigation--text--selected;
+}
+
+.extendednavigation__navigation-item.folder.selected .selected {
+    color: @color__navigation--text--selected;
+}
+
+
+
+
+// Dropdown Menu
+// -----------------------------
+
+.navigation-item.folder {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    @media @bp-1300px {
+        position: inherit;
+    }
+}
+
+.navigation-item.folder .navigation__item-name {
+    color: @color__h4--text;
+    &:hover {
+        color: @color__h4--text;
+    }
+}
+
+
+// // Dropdown Arrow
+// .item-name--parent {
+//     &:after {
+//         font-family: 'FontAwesome', sans-serif;
+//         display: inline-block;
+//         margin-left: 0.8em;
+//         -webkit-transition: all 0.2s ease;
+//         -moz-transition: all 0.2s ease;
+//         -o-transition: all 0.2s ease;
+//         transition: all 0.2s ease;
+//         display: inline-block;
+//         vertical-align: middle;
+//         content: "";
+//         margin-left: 4px;
+//         border: 5px solid transparent;
+//         border-top-color: @color__navigation--text;
+//         @media @tablet {
+//             content: "";
+//             font-size: 0.8em;
+//         }
+//         .navigation-item.folder-open & {
+//             @media @tablet {
+//                 -webkit-transform: rotate(90deg);
+//                 -moz-transform: rotate(90deg);
+//                 -o-transform: rotate(90deg);
+//                 -ms-transform: rotate(90deg);
+//                 transform: rotate(90deg);
+//             }
+//         }
+//     }
+// }
+
+.navigation-item:hover .navigation-list--children {
+    @media @bp-1300px {
+        display: none;
+    }
+}
+
+.navigation-item.folder-open .navigation-list--children {
+    @media @bp-1300px {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        .flex-display;
+        min-height: 30px;
+        box-shadow: 0 3px 4px rgba(130, 130, 130, 0.2);
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.navigation-item--child {
+    @media @bp-1300px {
+        display: inline-block;
+    }
+}
+
+.navigation-list--children {
+    display: none;
+    border: 0;
+    background-color: white;
+    .box-shadow;
+
+    .navigation-item .item-name {
+        padding: 10px 20px;
+        @media @tablet {
+            padding: 8px 10px;
+        }
+    }
+
+    .item-name {
+        overflow: visible;
+    }
+}
+
+.navigation-list--children {
+    top: 100%;
+    @media @mobile {
+        top: 90%!important;
+    }
+}
+
+
+// Dropdown Menu Arrow
+// -------------------
+
+.item-name--parent {
+
+    &:after {
+        font-family: 'FontAwesome', sans-serif;
+        display: inline-block;
+        margin-left: 0.8em;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        vertical-align: middle;
+        content: "";
+        margin-left: 4px;
+        border: 5px solid transparent;
+        border-top-color: @color__navigation--text;
+        @media @bp-global-large {
+            content: "";
+            font-size: 0.8em;
+        }
+        .navigation-item.open & {
+            @media @bp-1300px {
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+}
+
+
+// Burger Icon
+// -------------
+
+.navigation-toggle {
+    display: none;
+}
+
+
+
+
+// Touch detection folder styling
+// --------------------------------
+
+
+// On devices without touch enabled, hover events will work as normal
+.no-touch {
+    .extendednavigation .navigation-item {
+        &:hover > .navigation-list--children {
+            display: block!important;
+            width: 100%;
+        }
+
+        &.folder-open .navigation-list--children {
+            display: none;
+        }
+    }
+}
+
+
+// On devices with touch enabled, hover is disabled and a JS toggle is used
+.extendednavigation .navigation-item {
+    &:hover .navigation-list--children {
+        display: none;
+    }
+
+    &.folder-open .navigation-list--children {
+        display: block;
+        width: 100%;
+    }
+}
+
