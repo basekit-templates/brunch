@@ -34,16 +34,18 @@ input[type="password"],
 .input--single-line,
 .input--search,
 textarea {
-    background-color: white;
+    background-color: @color__form--background;
     border-bottom: 0;
     padding: 10px;
     border: 1px solid #F3F1F1;
     border-radius: 0;
     -webkit-appearance: none;
     .box-shadow;
-    &:focus {
+
+    &:focus,
+    &:hover,
+    &:active {
         border-color: #DEDDDD;
-        box-shadow: none;
     }
 
     @media @mobile {
@@ -101,7 +103,7 @@ textarea {
 
 
 
-.button, 
+.button,
 .widget__profile.social-link {
     position: relative;
     border: none;

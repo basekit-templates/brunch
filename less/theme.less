@@ -94,7 +94,7 @@ body {
     background-color: @color__container--background;
     height: 110%;
     top: -75px;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
 
     .container {
         padding-top: 9%;
@@ -476,9 +476,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 0;
-    width: 50%;
-    background-color: #fff;
-    padding: 10px;
+    width: 50%;;
     .box-shadow;
     h1, h2, h3, h4, h5 {
         display: inline-block;
@@ -489,9 +487,6 @@ body {
     }
     p, a {
         color: @color__p--text;
-    }
-    .js-map {
-        height: 400px;
     }
     .social-item {
         margin-bottom: 0;
@@ -513,10 +508,17 @@ body {
     .account-name {
         margin-left: 0;
     }
+    [data-widget-type="profile"] {
+        background-color: #fff;
+        padding: 10px;
+        .box-shadow;
+    }
     @media @tablet {
         width: 90%;
     }
 }
+
+
 
 .page--default {
     .contact-footer-title {
@@ -646,7 +648,7 @@ body {
 .page--default {
     .contact-footer {
         @media @tablet {
-        margin-top: -190px;
+        margin-top: -120px;
             &:before {
                 content:"";
                 display: block;
@@ -661,7 +663,7 @@ body {
                 height: 90px;
                 background-color: @color__body--background;
                 position: absolute;
-                top: 50px;
+                top: 60px;
                 left: 0;
                 right: 0;
             }
@@ -672,7 +674,7 @@ body {
     }
 }
 
-// Footer content 
+// Footer content
 .footer-content-1 {
     margin-bottom: 10px;
 }

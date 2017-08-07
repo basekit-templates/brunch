@@ -30,15 +30,15 @@
         background: -moz-linear-gradient(top,#f2f2f2,#f2f2f2);
         background: -ms-linear-gradient(top,#f2f2f2,#f2f2f2);
         background: -o-linear-gradient(top,#f2f2f2,#f2f2f2);
-        -webkit-transform: skewY(-2deg);
-        -ms-transform: skewY(-2deg);
-        transform: skewY(-2deg);
-        height: 100px;
+        -webkit-transform: skewY(-1deg);
+        -ms-transform: skewY(-1deg);
+        transform: skewY(-1deg);
+        height: 80px;
         background-color: #f2f2f2;
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -50px;
+        bottom: -30px;
         z-index: 14;
         @media @mobile {
             height: 60px;
@@ -190,8 +190,6 @@
         line-height: bkscale(@font-swatch9-line-height,0.8);
     }
     @media @mobile {
-        font-size: bkscale(@font-swatch9-font-size,0.9);
-        line-height: bkscale(@font-swatch9-line-height,0.8);
         margin-top: 10px;
     }
 }
@@ -200,7 +198,7 @@
 // Feature Button
 // ---------------
 
-.feature__button { 
+.feature__button {
     margin: 10px 0 0 0;
     background-color: @color-swatch2;
     &:hover {
@@ -208,7 +206,7 @@
         &:after {
             color: lighten(@color-swatch2,10%);
         }
-    } 
+    }
 }
 
 

@@ -170,8 +170,8 @@
             "font__navigation--font-weight": "400",
             "font__navigation--line-height": "26px",
             "font__navigation--letter-spacing": "2px",
-            "color__navigation--text": "#fff",
-            "color__navigation--text--selected": "darken(@color-swatch3,10%)",
+            "color__navigation--text": "fade(#fff, 80%)",
+            "color__navigation--text--selected": "#fff",
             "color__navigation--background": "@color-swatch3"
         },
         "form": {

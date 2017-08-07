@@ -12,11 +12,11 @@
             margin-bottom: 30px;
         }
     }
-    
+
     // Gallery Item
     // ------------------------------
-    
-    
+
+
     .gallery-item {
         height: 0;
         width: 33.333%;
@@ -29,25 +29,25 @@
             padding-bottom: 40%;
         }
     }
-    
-    
-    
-    
+
+
+
+
     // Gallery Captions
     // ------------------------------
-    
-    
+
+
     .caption {
     	margin: 0; // LESS Framework reset
     }
-    
-    
-    
-    
+
+
+
+
     // Gallery Captions
     // ------------------------------
-    
-    
+
+
     .image-link {
     	display: block;
     	position: absolute;
@@ -62,14 +62,14 @@
             padding-bottom: 80%;
         }
     }
-    
+
     .image {
     	display: none; // Using background image instead
     }
-    
-    
+
+
     // Captions fade in/out
-    
+
     .caption-link {
     	padding: 20px;
     	position: absolute;
@@ -77,14 +77,14 @@
     	overflow: auto;
     	opacity: 0;
     	transition: transform .2s ease-in-out;
-    
+
         @media @bp-global-medium {
             padding: 20px;
         }
         @media @mobile {
             padding: 20px;
         }
-    
+
     	&:hover {
     		transform: translate3d(0px, -10px, 0px);
     		background-color: fade(@color__gallery-caption--background, 70%);
@@ -95,7 +95,7 @@
             }
     	}
     }
-    
+
     // Image Title
     .image-title {
         font-family: @font__h4--font-family;
@@ -106,7 +106,7 @@
         color: @color__feature-strapline--text;
     	text-transform: uppercase;
     }
-    
+
     .image-description {
     	color: @color__gallery-description--text;
     }
@@ -135,4 +135,19 @@
 			display: none;
 		}
 	}
+}
+
+.responsivecolumns .columns-three-left,
+.responsivecolumns .columns-three-middle,
+.responsivecolumns .columns-three-right,
+.responsivecolumns .columns-four-first,
+.responsivecolumns .columns-four-second,
+.responsivecolumns .columns-four-third,
+.responsivecolumns .columns-four-fourth {
+
+
+    .gallery-item {
+        padding-bottom: 100%;
+        width: 100%;
+    }
 }

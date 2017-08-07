@@ -101,6 +101,7 @@
 .navigation-item .item-name {
     padding: 8px 20px;
     text-transform: uppercase;
+    transition: color .35s ease;
 
     &:hover {
         color: @color__navigation--text--selected;
@@ -199,15 +200,12 @@
     @media @bp-1300px {
         position: absolute;
         width: 100%;
-        top: 77%;
+        top: 100%;
         .flex-display;
         min-height: 30px;
         box-shadow: 0 3px 4px rgba(130, 130, 130, 0.2);
         overflow-x: scroll;
         -webkit-overflow-scrolling: touch;
-    }
-    @media @tablet {
-        top: 73%;
     }
 }
 
@@ -236,7 +234,7 @@
 }
 
 .navigation-list--children {
-    top: 77%!important;
+    top: 100%;
     @media @mobile {
         top: 90%!important;
     }
