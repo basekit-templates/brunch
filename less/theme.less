@@ -89,8 +89,7 @@ body {
 .main-content {
     position: relative;
     background-color: @color__container--background;
-    height: 110%;
-    padding-bottom: 120px;
+    padding-bottom: 60px;
 
     .container {
         padding-top: 60px;
@@ -483,7 +482,7 @@ body {
     text-align: center;
     position: relative;
     z-index: 0;
-    width: 50%;;
+    width: 50%;
     .box-shadow;
     h1, h2, h3, h4, h5 {
         display: inline-block;
@@ -565,42 +564,34 @@ body {
     }
 }
 
-// Default page footer
-.page--default {
-    .contact-footer {
-        margin-top: -120px;
-    }
-}
+
 
 // Contact Footer
 .contact-footer {
     background-color: lighten(@color__footer--background,10%);
     padding: 0;
-    margin-top: -190px;
     position: relative;
+
     &:before {
-        content:"";
+        content: "";
         display: block;
-        background: -webkit-gradient(linear,left top,left bottom,from(@color__container--background),to(@color__container--background));
-        background: -webkit-linear-gradient(top,@color__container--background,@color__container--background);
-        background: -moz-linear-gradient(top,@color__container--background,@color__container--background);
-        background: -ms-linear-gradient(top,@color__container--background,@color__container--background);
-        background: -o-linear-gradient(top,@color__container--background,@color__container--background);
-        -webkit-transform: skewY(-2deg);
-        -ms-transform: skewY(-2deg);
-        transform: skewY(-2deg);
-        height: 100px;
         background-color: @color__body--background;
+        -webkit-transform: skewY(-1deg);
+        -ms-transform: skewY(-1deg);
+        transform: skewY(-1deg);
+        height: 80px;
         position: absolute;
-        top: -60px;
         left: 0;
         right: 0;
+        top: -40px;
 
         @media @mobile {
             height: 40px;
             top: -20px;
         }
     }
+
+
     @media @mobile {
         margin-top: -170px;
     }
@@ -657,34 +648,6 @@ body {
     }
 }
 
-.page--default {
-    .contact-footer {
-        @media @tablet {
-        margin-top: -120px;
-            &:before {
-                content:"";
-                display: block;
-                background: -webkit-gradient(linear,left top,left bottom,from(@color__container--background),to(@color__container--background));
-                background: -webkit-linear-gradient(top,@color__container--background,@color__container--background);
-                background: -moz-linear-gradient(top,@color__container--background,@color__container--background);
-                background: -ms-linear-gradient(top,@color__container--background,@color__container--background);
-                background: -o-linear-gradient(top,@color__container--background,@color__container--background);
-                -webkit-transform: skewY(-2deg);
-                -ms-transform: skewY(-2deg);
-                transform: skewY(-2deg);
-                height: 90px;
-                background-color: @color__body--background;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                right: 0;
-            }
-            @media @mobile {
-                top: 0px;
-            }
-        }
-    }
-}
 
 // Footer content
 .footer-content-1 {
