@@ -159,7 +159,13 @@ body {
 
 .page--home [data-widget-type="feature"].bk-tpl-hidden + .template-header,
 .template-header {
+    background-color: @color__header--background;
+    position: relative;
     overflow: hidden;
+    z-index: 12;
+    max-width: 100%;
+    padding: 20px 30px 70px;
+    width: 100%;
 
     &:after {
         content: "";
@@ -280,12 +286,6 @@ body {
 // ------------------------------
 
 .template-header {
-    background-color: @color__header--background;
-    position: relative;
-    z-index: 12;
-    max-width: 100%;
-    padding: 20px 30px 70px;
-    width: 100%;
 
     @media @bp-1300px {
         padding-bottom: 80px;
