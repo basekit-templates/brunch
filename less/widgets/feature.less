@@ -9,78 +9,50 @@
 // ------------------------------
 
 .hero {
+    overflow: hidden;
     position: relative;
-    @media @mobile {
-        .flex-display;
-        .flex-direction(column);
-    }
 
-    [data-widget-type="feature"] {
-        .flex-order(2);
-        z-index: 12;
-    }
-}
 
-.hero {
-    &:before {
+    &:after {
         content: "";
         display: block;
-        background: -webkit-gradient(linear,left top,left bottom,from(#f2f2f2),to(#f2f2f2));
-        background: -webkit-linear-gradient(top,#f2f2f2,#f2f2f2);
-        background: -moz-linear-gradient(top,#f2f2f2,#f2f2f2);
-        background: -ms-linear-gradient(top,#f2f2f2,#f2f2f2);
-        background: -o-linear-gradient(top,#f2f2f2,#f2f2f2);
+        background-color: @color__body--background;
         -webkit-transform: skewY(-1deg);
         -ms-transform: skewY(-1deg);
         transform: skewY(-1deg);
         height: 80px;
-        background-color: #f2f2f2;
         position: absolute;
         left: 0;
         right: 0;
-        bottom: -30px;
+        bottom: -60px;
         z-index: 14;
+
+        @media @bp-1300px {
+            bottom: -20px;
+            height: 40px;
+        }
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        background-color: @color__body--background;
+        -webkit-transform: skewY(-1deg);
+        -ms-transform: skewY(-1deg);
+        transform: skewY(-1deg);
+        height: 80px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -40px;
+        z-index: 14;
+
         @media @mobile {
             height: 40px;
             bottom: -20px;
         }
     }
 }
-
-
-// Hero Logo
-// ------------------------------
-
-.hero-logo {
-    position: absolute;
-    top: -20%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    z-index: 10001;
-    padding: 20px;
-    width: 100%;
-    min-height: 200px;
-    height: 119%;
-    z-index: 30;
-    padding: 0 40px;
-
-    .flex-display;
-    .flex-direction(column);
-    .justify-content(center);
-
-    @media @tablet {
-        bottom: 6%;
-        top: inherit;
-        min-height: inherit;
-        height: inherit;
-    }
-    @media @mobile {
-        bottom: 10%;
-    }
-}
-
-
 
 
 // Feature Overlay Toggle Buttons
@@ -136,10 +108,12 @@
     vertical-align: middle;
     height: 800px;
     background-color: @color__feature-content--background;
+
     @media @tablet {
         text-align: center;
-        padding: 0px 10px 30px;
+        padding: 0px 10px;
     }
+
     @media @mobile {
         height: 550px;
     }
@@ -160,7 +134,6 @@
 // Feature Headline
 .feature__headline {
     display: inline;
-    max-width: 140px;
     padding-bottom: 10px;
     background: linear-gradient(white,white), linear-gradient(white,white);
     background-size: 0, 20px 10px;
@@ -177,20 +150,19 @@
     @media @mobile {
         font-size: bkscale(@font-swatch8-font-size,0.4);
         line-height: bkscale(@font-swatch8-line-height,0.4);
-        background-size: 0, 20px 4px;
-        background-position: 0 80%;
+        background-size: 0, 20px 3px;
+        background-position: 0 70%;
     }
 }
 
 // Feature Strapline
 .feature__strapline {
     margin-top: 20px;
+
     @media @tablet {
-        font-size: bkscale(@font-swatch9-font-size,1);
-        line-height: bkscale(@font-swatch9-line-height,0.8);
-    }
-    @media @mobile {
-        margin-top: 10px;
+        font-size: bkscale(@font__feature-strapline--font-size, 0.95);
+        line-height: bkscale(@font-swatch9-line-height, 0.95);
+        margin-top: 15px;
     }
 }
 
@@ -245,7 +217,7 @@
 
 .feature-arrow-link {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 40px;
     display: block;
     width: 60px;
