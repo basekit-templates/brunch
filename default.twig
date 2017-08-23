@@ -21,18 +21,13 @@
         </div>
     </header>
 
-    <div class="homepage-nav">
-
-        {{widget('extendednavigation', 'extendednavigation', 
-        {"align":"center"})|raw}}
-                
-    </div>
+    {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
 
     <!-- Zone Content -->
     <div class="main-content">
 
         <div class="container">
-        
+
             <div class="template-title">
                 <h1 style="padding-bottom: 0;">
                     <span>{{ page.title }}</span>
@@ -62,14 +57,14 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Footer -->
     <footer class="template-footer">
-    
+
         <div class="container">
               {{widget('profile', 'footer-profile', { 'profileType':'socialicons' })|raw}}
         </div>
-    
+
     </footer>
 
 
