@@ -67,7 +67,7 @@ body {
         display: inline;
         max-width: 140px;
         padding-bottom: 10px;
-        background: linear-gradient(@color-swatch3,@color-swatch3), linear-gradient(@color-swatch3,@color-swatch3);
+        background: linear-gradient(@color__header--border,@color__header--border), linear-gradient(@color__header--border,@color__header--border);
         background-size: 0, 20px 10px;
         background-repeat: repeat-x;
         background-position: 0 100%;
@@ -559,6 +559,10 @@ body {
         @media @tablet {
             top: 40px;
         }
+
+        h1, h2, h3, h4, p, a, li, ol, span {
+            color: #a3a3a3;
+        }
     }
     .footer-container {
         @media @tablet {
@@ -613,7 +617,7 @@ body {
         position: absolute;
         left: 0;
         right: 0;
-        top: -40px;
+        top: -45px;
 
         @media @mobile {
             height: 40px;
