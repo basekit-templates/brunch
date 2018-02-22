@@ -215,9 +215,8 @@
             "font__feature-strapline--line-height" : "28px",
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing",
             "color__feature-strapline--text" : "#fff",
-            "color__feature-button--text" : "@color__body--background",
-            "color__feature-button--border" : "fade(@color__body--background, 10%)",
-            "color__feature-button--background" : "transparent"
+            "color__feature-button--text" : "#fff",
+            "color__feature-button--background" : "@color-swatch3"
         },
         "twitter": {
             "color__twitter-item--background": "#fff",
