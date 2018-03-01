@@ -137,6 +137,16 @@
         background-size: 0, 20px 3px;
         background-position: 0 70%;
     }
+
+
+    + .feature__strapline {
+        margin-top: 20px;
+    }
+
+
+    + .feature__button {
+        margin-top: 25px;
+    }
 }
 
 // Feature Strapline
@@ -148,6 +158,10 @@
         line-height: bkscale(@font-swatch9-line-height, 0.95);
         margin-top: 15px;
     }
+
+    + .feature__button {
+        margin-top: 10px;
+    }
 }
 
 
@@ -155,13 +169,13 @@
 // ---------------
 
 .feature__button {
-    margin: 10px 0 0 0;
-    background-color: @color-swatch2;
+    display: block;
+    margin: 0 auto;
+    background-color: @color__feature-button--background;
+    color: @color__feature-button--text;
     &:hover {
-        background-color: @color__button--background--hover;
-        &:after {
-            color: lighten(@color-swatch2,10%);
-        }
+        background-color: darken(@color__feature-button--background, 5%);
+        color: @color__feature-button--text;
     }
 }
 
