@@ -45,6 +45,11 @@ p {
 
 a {
 	color: @color__link--text;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
 
     &:hover {
         text-decoration: none;
@@ -258,7 +263,6 @@ a {
 
 
 	blockquote {
-		quotes: "\201C""\201D""\2018""\2019";
 		position: relative;
 		font-family: @font__h1--font-family;
 		text-align: center;
