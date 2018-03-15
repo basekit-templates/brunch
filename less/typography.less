@@ -45,6 +45,11 @@ p {
 
 a {
 	color: @color__link--text;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
 
     &:hover {
         text-decoration: none;
@@ -172,14 +177,10 @@ a {
 
 
 	a {
-		box-shadow: inset 0px -1px 0px 0px @color__link--text;
+		cursor: pointer;
 		display: inline-block;
 		line-height: 1.5;
-
-		&:hover {
-			text-decoration: none;
-			box-shadow: inset 0px -2px 0px 0px @color__link--text;
-		}
+		text-decoration: underline;
 	}
 
 
@@ -258,7 +259,6 @@ a {
 
 
 	blockquote {
-		quotes: "\201C""\201D""\2018""\2019";
 		position: relative;
 		font-family: @font__h1--font-family;
 		text-align: center;
