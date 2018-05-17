@@ -209,6 +209,8 @@
 .navigation-item--child {
     @media @bp-1300px {
         display: inline-block;
+        .flex-grow(1);
+        .flex-shrink(1);
     }
 }
 
@@ -292,7 +294,7 @@
 .no-touch {
     .extendednavigation .navigation-item {
         &:hover > .navigation-list--children {
-            display: block!important;
+            .flex-display;
             width: 100%;
         }
 
