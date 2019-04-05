@@ -13,6 +13,10 @@
     background-color: @color__navigation--background;
     .box-shadow;
 
+    @media only screen and (min-width: 1300px) {
+       max-width: 400px;
+    }
+
     @media @bp-1300px {
         position: absolute;
         width: 60%;
@@ -219,6 +223,11 @@
     border: 0;
     background-color: white;
     .box-shadow;
+
+    @media only screen and (min-width: 1300px) {
+        .flex-direction(column);
+        position: relative;
+    }
 
     .navigation-item .item-name {
         padding: 10px 20px;
