@@ -9,7 +9,7 @@
     top: 20%;
     position: fixed;
     right: 0;
-    z-index: 15;
+    z-index: 3;
     background-color: @color__navigation--background;
     .box-shadow;
 
@@ -82,8 +82,8 @@
 .js-folder {
     .navigation-list {
         @media @tablet {
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-        overflow-x: scroll;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+            overflow-x: scroll;
         }
     }
 }
@@ -160,38 +160,6 @@
 }
 
 
-// // Dropdown Arrow
-// .item-name--parent {
-//     &:after {
-//         font-family: 'FontAwesome', sans-serif;
-//         display: inline-block;
-//         margin-left: 0.8em;
-//         -webkit-transition: all 0.2s ease;
-//         -moz-transition: all 0.2s ease;
-//         -o-transition: all 0.2s ease;
-//         transition: all 0.2s ease;
-//         display: inline-block;
-//         vertical-align: middle;
-//         content: "";
-//         margin-left: 4px;
-//         border: 5px solid transparent;
-//         border-top-color: @color__navigation--text;
-//         @media @tablet {
-//             content: "";
-//             font-size: 0.8em;
-//         }
-//         .navigation-item.folder-open & {
-//             @media @tablet {
-//                 -webkit-transform: rotate(90deg);
-//                 -moz-transform: rotate(90deg);
-//                 -o-transform: rotate(90deg);
-//                 -ms-transform: rotate(90deg);
-//                 transform: rotate(90deg);
-//             }
-//         }
-//     }
-// }
-
 .navigation-item:hover .navigation-list--children {
     @media @bp-1300px {
         display: none;
@@ -244,6 +212,7 @@
 
 .navigation-list--children {
     top: 100%;
+    
     @media @mobile {
         top: 90%!important;
     }

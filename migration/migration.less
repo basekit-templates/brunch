@@ -12,10 +12,162 @@
     // -----------------------------
 
 
+    &.edit [data-widget-type="extendednavigation"] {
+        right: 100px;
+
+        @media @bp-1300px {
+            right: 0;
+        }
+    }
+
+
+    [data-widget-type="extendednavigation"] {
+        @media @bp-1300px {
+            position: absolute;
+            width: 60%;
+            left: 0;
+            margin: -60px auto 0;
+            top: inherit;
+        }
+
+        @media @mobile {
+            width: 90%;
+            margin: -50px auto 0;
+        }
+    }
+    
+    
+    .main-content {
+        padding-bottom: 0;
+    }
+    
+    
+    .main-content .container {
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    
+    .main-content [data-name="row"] .row:before,
+    .main-content [data-name="row"] .row:after {
+        background-color: inherit;
+    }
+    
+    
+    .main-content [data-name="row"]:first-child .row:not(.row--background-type-image):before,
+    .main-content [data-name="row"]:last-child .row:not(.row--background-type-image):after {
+        content: "";
+        display: block;
+        transform: skewY(-1deg);
+        height: 90px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        
+        @media @mobile {
+            height: 50px;
+        }
+    }
+    
+    
+    .main-content [data-name="row"]:first-child {
+        z-index: 2;
+
+        .row__container {
+            padding-top: 80px;
+
+            @media @tablet {
+                padding-top: 40px;
+            }
+        }
+
+        .row:before {
+            bottom: initial;
+            top: -45px;
+            
+            @media only screen and (max-width: 1300px) {
+                top: -65px;
+            }
+            
+            @media @mobile {
+                top: -40px;
+            }
+        }
+    }
+
+
+    .page--default .main-content [data-name="row"]:first-child .row:before {
+        top: -30px;
+    }
+    
+    
+    .main-content [data-name="row"]:last-child .row:after {
+        bottom: -40px;
+        top: initial;
+        z-index: 2;
+        
+        @media only screen and (max-width: 1300px) {
+            bottom: -35px;
+        }
+        
+        @media @mobile {
+            bottom: -25px;
+        }
+    }
+
+    
+    .row-add-button {
+        z-index: 1;
+    }
+
+
+    .blogpostlist__post-content {
+        padding-bottom: 70px;
+    }
+
+
+    .contact-footer-title {
+        @media @tablet {
+            top: 0;
+        }
+    }
+
+
 
 
     // Migration styles
     // -----------------------------
+    
+    
+    // Applies spacing to widgets to mimic container width
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    .row:not(.row--width-no-padding) .row__container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1024px;
+        width: 90%;
+    }
+    
+    
+    // Adds spacing to a section when a widget follows it
+    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child),
+    &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 20px;
+    }
 
+    
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 80px;
 
+        @media @tablet {
+            margin-bottom: 45px;
+        }
+    }
 }
