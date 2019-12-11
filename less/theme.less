@@ -56,13 +56,18 @@ body {
 
 .template-title {
     text-align: center;
-    margin-bottom: 80px;
-    @media @tablet {
-         margin-top: 50px;
+
+    [data-widget-type="pagetitle"]:not(.bk-tpl-hidden) {
+        margin-bottom: 80px;
+        
+        @media @tablet {
+             margin-top: 50px;
+        }
+        @media @mobile {
+            margin-bottom: 60px;
+        }
     }
-    @media @mobile {
-        margin-bottom: 60px;
-    }
+
     h1 {
         display: inline;
         max-width: 140px;
@@ -118,10 +123,9 @@ body {
         }
     }
 
-    .widget:first-child {
+    .widget:not([data-name="row"]):not([data-widget-type="pagetitle"]):first-child {
         margin: 0 0 30px 0;
     }
-
 }
 
 
@@ -141,7 +145,7 @@ body {
         top: 0;
         right: 0;
         left: 0;
-        z-index: 999;
+        z-index: 2;
 
         // Hide slant
         &:after {
@@ -164,7 +168,7 @@ body {
     background-color: @color__header--background;
     position: relative;
     overflow: hidden;
-    z-index: 12;
+    z-index: 2;
     max-width: 100%;
     padding: 20px 30px 70px;
     width: 100%;
@@ -357,126 +361,6 @@ body {
 
 
 
-// Header: Additional
-// ------------------------------
-
-// For default page and when feature is hidden
-// .widget[data-widget-type="feature"].bk-tpl-hidden + .template-header,
-// .template-header {
-//     padding: 30px 40px 135px;
-//     position: relative;
-//     z-index: inherit;
-//     width: 100%;
-//     background-color: @color__footer--background;
-//     min-height: auto;
-//     border-bottom: 1px solid darken(@color__container--background, 10%);
-
-//      &:before {
-//         content: "";
-//         display: block;
-//         background: -webkit-gradient(linear,left top,left bottom,from(#f2f2f2),to(#f2f2f2));
-//         background: -webkit-linear-gradient(top,#f2f2f2,#f2f2f2);
-//         background: -moz-linear-gradient(top,#f2f2f2,#f2f2f2);
-//         background: -ms-linear-gradient(top,#f2f2f2,#f2f2f2);
-//         background: -o-linear-gradient(top,#f2f2f2,#f2f2f2);
-//         -webkit-transform: skewY(-1deg);
-//         -ms-transform: skewY(-1deg);
-//         transform: skewY(-1deg);
-//         height: 100px;
-//         background-color: #f2f2f2;
-//         position: absolute;
-//         left: 0;
-//         right: 0;
-//         bottom: 0;
-//         z-index: 2;
-//     }
-
-
-//     // Profile Widget
-//     .profile {
-
-//         p, h2, h3,
-//         .phone-number-link,
-//         .company-link,
-//         .social-link:before,
-//         .emailaddress__email,
-//         .button {
-//             color: @color__companyname--text;
-//         }
-
-//         // Twitter
-//         .tweet-content a {
-//             color: white;
-//         }
-
-//          // Email
-//         .emailaddress__email {
-//             @media @tablet {
-//                 color: transparent;
-
-//                 &:before {
-//                     color: @color__h2--text;
-//                 }
-//             }
-//         }
-
-//         // Form
-//         .input {
-//             color: @color__h2--text;
-//             border-color: darken(@color__container--background, 10%);
-//         }
-
-//         // Placeholder
-//         .input::-webkit-input-placeholder {
-//             opacity: .6;
-//             color: @color__p--text;
-//         }
-//         .input:-moz-placeholder {
-//             opacity: .6;
-//             color: @color__p--text;
-//         }
-//         .input:-ms-input-placeholder {
-//             opacity: .6;
-//             color: @color__p--text;
-//         }
-//         .input::-ms-input-placeholder {
-//             opacity: .6;
-//             color: @color__p--text;
-//         }
-
-//         // Button
-//         .button {
-//             position: relative;
-//             top: 1px;
-//             margin-top: 0;
-//             padding: 0 10px;
-//             border-left: 0;
-//             border-right: 1px solid darken(@color__container--background, 10%);
-//         }
-
-//     }
-
-//     // Navigation Toggle Button
-//     .navigation-toggle {
-//         background-color: @color__navigation--text;
-
-//         &:after, &:before {
-//             background: @color__navigation--text;
-//         }
-//     }
-//     .open .navigation-toggle {
-//         background-color: transparent;
-
-//         &:after, &:before {
-//             background: @color__navigation--text;
-//         }
-//     }
-//     .page--default .template-header .profile .tweet-content a {
-//         color: #595959;
-//     }
-// }
-
-
 // ------------------------------
 // #Footer
 // ------------------------------
@@ -503,15 +387,6 @@ body {
         }
     }
 
-    // [data-widget-type="map"] {
-    //     display: block;
-    //     margin: 0px auto;
-    //     text-align: center;
-    //     position: relative;
-    //     z-index: 0;
-    //     width: 50%;
-    //     .box-shadow;
-    // }
 
     h1, h2, h3, h4, h5 {
         display: inline-block;
@@ -556,8 +431,10 @@ body {
         max-width: 930px;
         margin: 0 auto;
         padding: 0px 20px;
+        position: relative;
         text-align: center;
         display: block;
+        z-index: 3;
         @media @tablet {
             top: 40px;
         }
