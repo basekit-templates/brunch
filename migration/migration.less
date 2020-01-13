@@ -65,9 +65,21 @@
         left: 0;
         right: 0;
         z-index: 1;
-        
-        @media @mobile {
+    }
+
+
+    .main-content [data-name="row"]:first-child .row:not(.row--background-type-image):before {
+
+        @media @tablet {
             height: 50px;
+        }
+    }
+
+
+    .main-content [data-name="row"]:first-child .row:not(.row--background-type-image):after {
+
+        @media @tablet {
+            height: 80px;
         }
     }
     
