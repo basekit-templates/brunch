@@ -49,13 +49,13 @@
     }
     
     
-    .main-content [data-name="row"] .row:before,
-    .main-content [data-name="row"] .row:after {
+    .main-content [data-name="row"]:not(.active-row) .row:before,
+    .main-content [data-name="row"]:not(.active-row) .row:after {
         background-color: inherit;
     }
     
     
-    .main-content [data-name="row"]:first-child .row:not(.row--background-type-image):before,
+    .main-content [data-name="row"]:not(.active-row):first-child .row:not(.row--background-type-image):before,
     .main-content [data-name="row"]:last-child .row:not(.row--background-type-image):after {
         content: "";
         display: block;
@@ -68,7 +68,7 @@
     }
 
 
-    .main-content [data-name="row"]:first-child .row:not(.row--background-type-image):before {
+    .main-content [data-name="row"]:not(.active-row):first-child .row:not(.row--background-type-image):before {
 
         @media @tablet {
             height: 50px;
@@ -76,7 +76,7 @@
     }
 
 
-    .main-content [data-name="row"]:first-child .row:not(.row--background-type-image):after {
+    .main-content [data-name="row"]:not(.active-row):first-child .row:not(.row--background-type-image):after {
 
         @media @tablet {
             height: 80px;
@@ -84,7 +84,7 @@
     }
     
     
-    .main-content [data-name="row"]:first-child {
+    .main-content [data-name="row"]:not(.active-row):first-child {
         z-index: 2;
 
         .row__container {
@@ -100,10 +100,6 @@
             top: -45px;
             
             @media only screen and (max-width: 1300px) {
-                top: -65px;
-            }
-            
-            @media @mobile {
                 top: -40px;
             }
         }

@@ -115,7 +115,7 @@
 
 
     .table-row:not(.table-row--heading):not(.table-row--order-total) {
-        .cell  {
+        .cell {
             background-color: #fff;
         }
     }
@@ -424,12 +424,13 @@
 
         // Cell Price, Cell Total
 
-        .cell--price, .cell--total {
+        .table-row .cell--price, 
+        .table-row .cell--total {
             float: left;
             width: 50%;
-            border-top: 1px solid @color__container--background !important;
+            border-top: 1px solid @color__container--background;
             padding: 6px 10px;
-            background-color: darken(@color__container--background, 8%) !important;
+            background-color: darken(@color__container--background, 8%);
         }
     }
 }
