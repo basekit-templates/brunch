@@ -49,14 +49,9 @@
     }
     
     
-    .main-content [data-name="row"]:not(.active-row) .row:before,
-    .main-content [data-name="row"]:not(.active-row) .row:after {
-        background-color: inherit;
-    }
-    
-    
     .main-content [data-name="row"]:not(.active-row):first-child .row:not(.row--background-type-image):before,
     .main-content [data-name="row"]:last-child .row:not(.row--background-type-image):after {
+        background-color: inherit;
         content: "";
         display: block;
         transform: skewY(-1deg);
@@ -69,7 +64,6 @@
 
 
     .main-content [data-name="row"]:not(.active-row):first-child .row:not(.row--background-type-image):before {
-
         @media @tablet {
             height: 50px;
         }
@@ -77,7 +71,6 @@
 
 
     .main-content [data-name="row"]:not(.active-row):first-child .row:not(.row--background-type-image):after {
-
         @media @tablet {
             height: 80px;
         }
