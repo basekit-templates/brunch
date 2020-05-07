@@ -24,6 +24,7 @@
     .tweet-item {
         width: 100%;
         background-color: transparent;
+        box-shadow: none;
         padding: 0;
     }
     .tweet-content {
@@ -177,7 +178,7 @@
         }
 
         // Typography
-        a, h1, h2, h3, h4, p {
+        a, h1, h2, h3, h4, p, legend, label {
             position: relative;
             display: inline-block;
             padding-bottom: 0;
@@ -185,7 +186,7 @@
             font-size: 14px;
             font-weight: 400;
             letter-spacing: 3px;
-            color: #bebebe;
+            color: @color__companyname--text;
             text-transform: uppercase;
             -webkit-font-smoothing: inherit;
 
@@ -305,19 +306,9 @@
             display: none;
         }
 
-        .account-name {
-            color: white;
-        }
 
-        .tweet-content {
-
-            a {
-                color: white;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
+        .tweet-content a:hover {
+            text-decoration: underline;
         }
 
 
@@ -515,4 +506,3 @@
         background-color: transparent!important;
     }
 }
-
