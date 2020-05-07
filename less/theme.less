@@ -30,9 +30,9 @@
 
 @bp-1300px:   ~"only screen and (max-width: 1300px)";
 @bp-1024px:   ~"only screen and (max-width: 1024px)";
-@bp-global-large: 	~"only screen and (min-width: 1400px)";
-@bp-global-medium: 	~"only screen and (min-width: 770px) and (max-width: 1400px)";
-@bp-global-small: 	~"only screen and (max-width: 769px)";
+@bp-global-large:   ~"only screen and (min-width: 1400px)";
+@bp-global-medium:  ~"only screen and (min-width: 770px) and (max-width: 1400px)";
+@bp-global-small:   ~"only screen and (max-width: 769px)";
 @mobile: ~"only screen and (max-width: 650px)";
 
 // When specific styles for responsive columns styles are applied
@@ -254,7 +254,12 @@ body {
             }
         }
         .company-link {
-            color: @font-swatch10-color;
+            color: contrast(@color__header--background, #2b2f3a, #fff);
+        }
+        .profile {
+            a, h1, h2, h3, h4, p, legend, label, .social-link:before {
+                color: contrast(@color__header--background, #2b2f3a, #fff);
+            }
         }
         .container {
             @media @tablet {
@@ -304,15 +309,15 @@ body {
 
 
     // Container
-	.container {
-		.flex-display;
-		.justify-content(space-between);
+    .container {
+        .flex-display;
+        .justify-content(space-between);
         .align-items(center);
 
         @media @mobile {
             display: block;
         }
-	}
+    }
 
     // Flex Item
     .flex-item {
